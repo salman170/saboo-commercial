@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import HeroSection from "./HeroSection";
+import Range from "./Range";
+
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+     
+      <HeroSection />
+      <Range />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

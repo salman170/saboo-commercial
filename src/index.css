@@ -2,8 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html,
 body {
   scroll-behavior: smooth;
+}
+
+.swiper-pagination-bullet {
+  height: 16px !important;
+  width: 16px !important;
+  border-radius: 100% !important;
+  border: 2px solid white !important;
+  border-color: white !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+  scale: 1.4;
+  margin-bottom: 16px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #da251d !important;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 100% !important;
+  border: 0px !important;
+  scale: 1;
+  /* margin-bottom: 11px !important;  */
 }
