@@ -125,20 +125,22 @@ const Range = () => {
           onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
         >
           <SwiperSlide>
-            <div className="flex items-center justify-center ">
+            <div className="flex items-center justify-center slider_img">
               <img
                 src={require("../../assets/vehicles/super_carry/Super Carry.webp")}
                 alt=""
                 srcset=""
+                className=""
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex items-center justify-center ">
+            <div className="flex items-center justify-center slider_img">
               <img
                 src={require("../../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
                 alt=""
                 srcset=""
+                className=""
               />
             </div>
           </SwiperSlide>

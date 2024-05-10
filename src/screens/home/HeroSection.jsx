@@ -1,7 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,12 +13,7 @@ import { FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 
 const HeroSection = () => {
-  useGSAP(
-    ()=>{
-        gsap.fromTo(".social_links", { opacity: 0, x:100 }, { opacity: 1, duration: 0.5, x:0, ease: "power1.inOut", stagger: 0.2});
-
-    }
-  );
+ 
   return (
     <div className="relative overflow-hidden bg-primary">
       <Swiper
