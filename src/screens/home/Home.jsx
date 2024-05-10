@@ -4,6 +4,7 @@ import Range from "./Range";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AboutUs from "./AboutUs";
 
 // Ensure ScrollTrigger is registered with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -32,7 +33,7 @@ const Home = () => {
         duration: 2,
         y: 0,
         ease: "power1.inOut",
-        stagger: 0.2,
+
         scrollTrigger: {
           trigger: ".slider_img",
           start: "top 85%",
@@ -44,13 +45,28 @@ const Home = () => {
         },
       }
     );
+  //   gsap.fromTo(
+  //     ".textUp",
+  //     { opacity: 0 },
+  //     {
+  //       opacity: 1,
+  //       duration: 2,
+  //       ease: "power1.inOut",
+  //       scrollTrigger: {
+  //         trigger: ".textUp",
+  //         start: "top 85%",
+  //         end: "bottom bottom",
+  //         scrub: true, // Smoothly transition the animation based on scroll position
+  //       },
+  //     }
+  //   );
   });
 
   return (
-    <div>
+    <div className="">
       <HeroSection />
       <Range />
-
+      <AboutUs />
     </div>
   );
 };

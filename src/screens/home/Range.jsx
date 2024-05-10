@@ -23,7 +23,7 @@ const Range = () => {
       }}
       className="bg-center bg-no-repeat bg-cover "
     >
-      <div className="py-6 font-medium text-center lg:py-10 md:text-lg lg:text-2xl">
+      <div className="py-6 text-xl font-medium text-center lg:py-10 md:text-2xl lg:text-3xl">
         VEHICLE RANGE
       </div>
       <div className="flex justify-center gap-2 pb-6 text-center lg:pb-10">
@@ -125,7 +125,7 @@ const Range = () => {
           onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
         >
           <SwiperSlide>
-            <div className="flex items-center justify-center slider_img">
+            <div className="flex items-center justify-center opacity-0 slider_img ">
               <img
                 src={require("../../assets/vehicles/super_carry/Super Carry.webp")}
                 alt=""
@@ -135,7 +135,7 @@ const Range = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex items-center justify-center slider_img">
+            <div className="flex items-center justify-center opacity-0 slider_img ">
               <img
                 src={require("../../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
                 alt=""
