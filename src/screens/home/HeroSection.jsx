@@ -21,7 +21,7 @@ const HeroSection = () => {
     }
   );
   return (
-    <div className="relative bg-primary">
+    <div className="relative overflow-hidden bg-primary">
       <Swiper
         pagination={{
           dynamicBullets: true,
@@ -45,7 +45,7 @@ const HeroSection = () => {
               autoPlay
               muted
               loop
-              className="object-cover w-full h-full hidden md:block"
+              className="hidden object-cover w-full h-full md:block"
               poster="https://saboocommercial.in/images/banners/newbanner.webp"
               src="https://storage-uat.marutisuzukicommercial.com/homepage-herobanner/HeroBanner1Updated.mp4"
             ></video>
@@ -65,7 +65,7 @@ const HeroSection = () => {
               autoPlay
               muted
               loop
-              className="object-cover w-full h-full hidden md:block"
+              className="hidden object-cover w-full h-full md:block"
               poster="https://saboocommercial.in/images/banners/newbanner.webp"
               src="https://storage-uat.marutisuzukicommercial.com/homepage-herobanner/HeroBanner2Updated.mp4"
             ></video>
@@ -82,8 +82,8 @@ const HeroSection = () => {
 
         {/* <div className="h-10 bg-white"></div> */}
       </Swiper>
-      <div className="absolute bottom-20 right-10 z-10 ">
-        <div className="flex flex-col gap-2 md:flex-row  ">
+      <div className="absolute z-10 bottom-20 right-10 ">
+        <div className="flex flex-col gap-2 md:flex-row ">
           <button className="py-2.5 hover:shadow-xl shadow-black w-32 text-xs text-primary rounded-lg  hover:text-white hover:bg-primary bg-white">
             Explore
           </button>
@@ -92,14 +92,17 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <div id="" className="text-xl lg:text-2xl hidden   absolute top-1/2 -translate-y-1/2 right-8 z-10 -mt-6 text-white md:flex md:flex-col md:gap-3 ">
+      <div
+        id=""
+        className="absolute z-10 hidden -mt-6 text-xl text-white -translate-y-1/2 lg:text-2xl top-1/2 right-8 md:flex md:flex-col md:gap-3"
+      >
         <a
           href="https://twitter.com/SabooCommercial"
           target="_blank"
           rel="noreferrer"
           className="social_links"
         >
-          <FaXTwitter className="hover:text-primary cursor-pointer" />
+          <FaXTwitter className="cursor-pointer hover:text-primary" />
         </a>
         <a
           href="https://www.instagram.com/saboocommercial/"
@@ -107,7 +110,7 @@ const HeroSection = () => {
           rel="noreferrer"
           className="social_links"
         >
-          <FaInstagram className="hover:text-primary cursor-pointer" />
+          <FaInstagram className="cursor-pointer hover:text-primary" />
         </a>
         <a
           href="https://www.facebook.com/saboorkscommercial/"
@@ -115,7 +118,7 @@ const HeroSection = () => {
           rel="noreferrer"
           className="social_links"
         >
-          <FaFacebookF className="hover:text-primary font-light cursor-pointer" />
+          <FaFacebookF className="font-light cursor-pointer hover:text-primary" />
         </a>
         <a
           href="https://youtube.com"
@@ -123,7 +126,7 @@ const HeroSection = () => {
           rel="noreferrer"
           className="social_links"
         >
-          <FaYoutube className="hover:text-primary cursor-pointer" />
+          <FaYoutube className="cursor-pointer hover:text-primary" />
         </a>
       </div>
     </div>

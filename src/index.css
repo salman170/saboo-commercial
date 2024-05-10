@@ -28,3 +28,19 @@ body {
   scale: 1;
   /* margin-bottom: 11px !important;  */
 }
+
+.carSlider .swiper-slide img {
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  transition-duration: 0.5s;
+}
+
+.carSlider .swiper-slide-active img {
+  transition-duration: 1s;
+  transform: scale(1);
+}
+
+.carSlider .swiper-wrapper {
+    transition-duration: 0.8s ease !important;
+  }

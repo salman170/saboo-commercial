@@ -8,12 +8,15 @@
     "axios": "^1.6.8",
     "formik": "^2.4.6",
     "gsap": "^3.12.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^17.0.2",
+    "react-countup": "^6.5.3",
+    "react-dom": "^17.0.2",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.0",
     "react-scripts": "5.0.1",
+    "react-tridi": "^2.1.1",
     "swiper": "^11.1.1",
+    "tridi": "^2.0.3",
     "yup": "^1.4.0"
   },
   "scripts": {
