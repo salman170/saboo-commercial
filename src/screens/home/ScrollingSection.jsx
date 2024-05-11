@@ -2,7 +2,7 @@ import React from "react";
 
 const ScrollingSection = () => {
   return (
-    <div className="relative py-20 overflow-hidden scorllingDiv">
+    <div className="relative py-20 overflow-hidden scorllingDiv lg:py-0">
       <div className="w-full scorllingImg">
         <img
           src={require("../../assets/home/BackgroundImage.png")}
