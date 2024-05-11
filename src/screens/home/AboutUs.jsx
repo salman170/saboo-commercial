@@ -6,9 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/grid";
+// import "swiper/css/grid";
 import "swiper/css/pagination";
-import { Navigation } from "swiper/modules";
+import {  Navigation } from "swiper/modules";
 import { IoVideocam } from "react-icons/io5";
 
 const AboutUs = () => {
@@ -16,6 +16,7 @@ const AboutUs = () => {
     AOS.init();
     //    AOS.init({ once: true });
   }, []);
+  
   const slidesData = [
     [
       {
@@ -134,7 +135,6 @@ const AboutUs = () => {
           <img
             src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/map.gif"
             alt=""
-            srcset=""
           />
           <div className="w-full">
             <div className="w-full h-full p-10 border-t border-gray-200 shadow-xl rounded-xl"></div>
@@ -158,8 +158,8 @@ const AboutUs = () => {
         >
           TESTIMONIALS
         </div>
-        <div className="h-[50vh] relative w-full px-2  ">
-          <div className="container mx-auto xl:max-w-7xl ">
+        <div className="relative w-full px-2 ">
+          <div className="container mx-auto xl:max-w-5xl ">
             <Swiper
               //   grid={{
               //     rows: 2,
@@ -167,29 +167,34 @@ const AboutUs = () => {
               breakpoints={{
                 640: {
                   slidesPerView: 1,
-                  spaceBetween: 10,
+                  spaceBetween: 2,
                 },
                 768: {
                   slidesPerView: 2,
-                  spaceBetween: 10,
+                  spaceBetween: 6,
                 },
                 1024: {
                   slidesPerView: 4,
-                  spaceBetween: 2,
+                  spaceBetween: 8,
                 },
               }}
+              // loop={true}
+              // autoplay={{
+              //   delay: 6000,
+              //   disableOnInteraction: false,
+              // }}
               spaceBetween={30}
               className="my-10 mySwiper"
               navigation={true}
               modules={[Navigation]}
             >
               {slidesData.map((slide, index) => (
-                <SwiperSlide key={index} className="w-1/3 h-full p-2 ">
+                <SwiperSlide key={index} className="h-full ">
                   <div
                     data-aos="zoom-in"
                     data-aos-delay={100 * (index + 1)}
                     data-aos-duration="500"
-                    className="w-full px-4 py-6 mb-2 text-center bg-white border rounded-lg shadow-xl lg:py-10 lg:px-6"
+                    className="w-full px-4 py-6 mb-2 text-center  border rounded-lg shadow-lg lg:py-8 lg:px-6 bg-gradient-to-t from-[#d6e7ff] via-[#EDF4FE] to-white"
                   >
                     <div className="relative">
                       <img
@@ -204,15 +209,15 @@ const AboutUs = () => {
                     <div className="pt-4 pb-2 font-semibold">
                       {slide[0].name}
                     </div>
-                    <div className="text-xs lg:h-12">
+                    <div className="text-xs lg:min-h-20">
                       {slide[0].description}
                     </div>
                   </div>
                   <div
                     data-aos="zoom-in"
-                    data-aos-delay={200 * (index + 1)}
+                    // data-aos-delay={200 * (index + 1)}
                     data-aos-duration="500"
-                    className="w-full p-4 mb-2 text-center bg-white border rounded-lg shadow-xl"
+                    className="w-full px-4 py-6 mb-2 text-center  border rounded-lg shadow-lg lg:py-8 lg:px-6 bg-gradient-to-t from-[#d6e7ff] via-[#EDF4FE] to-white"
                   >
                     <div className="relative">
                       <img
@@ -227,7 +232,7 @@ const AboutUs = () => {
                     <div className="pt-4 pb-2 font-semibold">
                       {slide[1].name}
                     </div>
-                    <div className="text-xs lg:h-12">
+                    <div className="text-xs lg:min-h-20">
                       {slide[1].description}
                     </div>
                   </div>

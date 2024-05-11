@@ -1,34 +1,34 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
-   const [visible, setVisible] = useState(true);
+  //  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  //  const [visible, setVisible] = useState(true);
 
-   useEffect(() => {
-     const handleScroll = () => {
-       const currentScrollPos = window.pageYOffset;
-       const isVisible =
-         prevScrollPos > currentScrollPos || currentScrollPos < 10;
-       setPrevScrollPos(currentScrollPos);
-       setVisible(isVisible);
-     };
+  //  useEffect(() => {
+  //    const handleScroll = () => {
+  //      const currentScrollPos = window.pageYOffset;
+  //      const isVisible =
+  //        prevScrollPos > currentScrollPos || currentScrollPos < 10;
+  //      setPrevScrollPos(currentScrollPos);
+  //      setVisible(isVisible);
+  //    };
 
-     window.addEventListener("scroll", handleScroll);
+  //    window.addEventListener("scroll", handleScroll);
 
-     return () => {
-       window.removeEventListener("scroll", handleScroll);
-     };
-   }, [prevScrollPos]);
+  //    return () => {
+  //      window.removeEventListener("scroll", handleScroll);
+  //    };
+  //  }, [prevScrollPos]);
    
   return (
     <div
-      className="sticky top-0 left-0 z-20 w-full bg-white "
-      style={{
-        transform: visible ? "translateY(0)" : "translateY(-100%)",
-        transition: "transform 0.3s ease",
-      }}
+      className="sticky top-0 left-0 z-20 w-full px-2 bg-white shadow-md lg:px-4"
+      // style={{
+      //   transform: visible ? "translateY(0)" : "translateY(-100%)",
+      //   transition: "transform 0.3s ease",
+      // }}
     >
       <div className="container flex items-center justify-between h-full px-1 mx-auto ">
         <div>

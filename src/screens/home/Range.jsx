@@ -129,7 +129,6 @@ const Range = () => {
               <img
                 src={require("../../assets/vehicles/super_carry/Super Carry.webp")}
                 alt=""
-                srcset=""
                 className=""
               />
             </div>
@@ -139,7 +138,6 @@ const Range = () => {
               <img
                 src={require("../../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
                 alt=""
-                srcset=""
                 className=""
               />
             </div>
@@ -150,7 +148,6 @@ const Range = () => {
           <img
             src={require("../../assets/home/dotted-circle.png")}
             alt=""
-            srcset=""
             className="md:h-28 w-min"
           />
         </div>
@@ -160,14 +157,12 @@ const Range = () => {
             <img
               src={require("../../assets/vehicles/ecco_cargo/eecoCargoBrandName.png")}
               alt=""
-              srcset=""
               className="h-4 w-min"
             />
           ) : (
             <img
               src={require("../../assets/vehicles/super_carry/new super carry logo.webp")}
               alt=""
-              srcset=""
               className="h-6 w-min"
             />
           )}

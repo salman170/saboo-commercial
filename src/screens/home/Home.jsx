@@ -5,6 +5,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AboutUs from "./AboutUs";
+import HomeNews from "./HomeNews";
+import SocialMedia from "./SocialMedia";
 
 // Ensure ScrollTrigger is registered with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -67,6 +69,8 @@ const Home = () => {
       <HeroSection />
       <Range />
       <AboutUs />
+      <HomeNews />
+      <SocialMedia />
     </div>
   );
 };
