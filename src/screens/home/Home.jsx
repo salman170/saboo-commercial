@@ -8,6 +8,7 @@ import AboutUs from "./AboutUs";
 import HomeNews from "./HomeNews";
 import SocialMedia from "./SocialMedia";
 import Enquiry from "./Enquiry";
+import ScrollingSection from "./ScrollingSection";
 
 // Ensure ScrollTrigger is registered with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -48,21 +49,22 @@ const Home = () => {
         },
       }
     );
-  //   gsap.fromTo(
-  //     ".textUp",
-  //     { opacity: 0 },
-  //     {
-  //       opacity: 1,
-  //       duration: 2,
-  //       ease: "power1.inOut",
-  //       scrollTrigger: {
-  //         trigger: ".textUp",
-  //         start: "top 85%",
-  //         end: "bottom bottom",
-  //         scrub: true, // Smoothly transition the animation based on scroll position
-  //       },
-  //     }
-  //   );
+
+    // timeline.to(".scorllingDiv", {
+    //   duration: 2,
+    //   height: "200vh", // Adjust this value to control the height of the "scrollingDiv
+    //   y: 0,
+    //   ease: "power1.inOut",
+    //   scrollTrigger: {
+    //     trigger: ".scorllingDiv",
+    //     start: "top 85%",
+    //     end: "bottom bottom",
+    //     // start: "bottom 10%", // Adjust this value to control when the animation starts
+    //     // end: "bottom center", // Adjust this value to control when the animation ends
+    //     scrub: true, // Smoothly transition the animation based on scroll position
+    //     markers: true, // Show markers for testing purposes
+    //   },
+    // });
   });
 
   return (
@@ -73,6 +75,7 @@ const Home = () => {
       <HomeNews />
       <SocialMedia />
       <Enquiry />
+      <ScrollingSection />
     </div>
   );
 };

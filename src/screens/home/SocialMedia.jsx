@@ -34,7 +34,7 @@ const SocialMedia = () => {
       </div>
       <div className="hidden gap-2 md:grid md:grid-cols-12">
         <div className="col-span-4">
-          <div className="w-full group hover:bg-primary h-[30vh] rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/youtubenew1.png)] bg-cover bg-center">
+          <div className="w-full group hover:bg-primary h-[25vh]  rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/youtubenew1.png)] bg-cover bg-center">
             <div className="relative w-full h-full rounded-xl group-hover:bg-primary/80 ">
               <div className="absolute flex items-center justify-center w-8 h-8 mt-2 bg-[#FF0000] rounded-full top-2 left-2 ">
                 <FaYoutube className="text-xl text-white" />
@@ -56,7 +56,7 @@ const SocialMedia = () => {
               </div>
             </div>
           </div>
-          <div className="w-full group hover:bg-primary h-[30vh] rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/youtubenew2.png)] mt-2 bg-cover bg-center">
+          <div className="w-full group hover:bg-primary h-[25vh]  rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/youtubenew2.png)] mt-2 bg-cover bg-center">
             <div className="relative w-full h-full rounded-xl group-hover:bg-primary/80 ">
               <div className="absolute flex items-center justify-center w-8 h-8 mt-2 bg-[#FF0000] rounded-full top-2 left-2 ">
                 <FaYoutube className="text-xl text-white" />
@@ -79,7 +79,7 @@ const SocialMedia = () => {
             </div>
           </div>
         </div>
-        <div className="w-full  hover:bg-primary h-[60.5vh] rounded-xl col-span-4 ">
+        <div className="w-full  hover:bg-primary h-[50.5vh] rounded-xl col-span-4 ">
           <div className="w-full group hover:bg-primary h-full rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/twitternew.png)] bg-cover bg-center">
             <div className="relative w-full h-full rounded-xl group-hover:bg-primary/80 ">
               <div className="absolute flex items-center justify-center w-8 h-8 mt-2 bg-black rounded-full top-2 left-2 ">
@@ -102,7 +102,7 @@ const SocialMedia = () => {
           </div>
         </div>
         <div className="col-span-2">
-          <div className="w-full group hover:bg-primary h-[30vh] rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/facebookupdated.png)] bg-cover bg-center">
+          <div className="w-full group hover:bg-primary h-[25vh]  rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/facebookupdated.png)] bg-cover bg-center">
             <div className="relative w-full h-full rounded-xl group-hover:bg-primary/80 ">
               <div className="absolute flex items-center justify-center w-8 h-8 mt-2 bg-[#3B5998] rounded-full top-2 left-2 ">
                 <FaFacebookF className="text-xl text-white" />
@@ -124,7 +124,7 @@ const SocialMedia = () => {
               </div>
             </div>
           </div>
-          <div className="w-full group hover:bg-primary h-[30vh] rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/facebooknew.png)] mt-2 bg-cover bg-center">
+          <div className="w-full group hover:bg-primary h-[25vh]  rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/facebooknew.png)] mt-2 bg-cover bg-center">
             <div className="relative w-full h-full rounded-xl group-hover:bg-primary/80 ">
               <div className="absolute flex items-center justify-center w-8 h-8 mt-2 bg-[#3b5998] rounded-full top-2 left-2 ">
                 <FaFacebookF className="text-xl text-white" />
@@ -148,7 +148,7 @@ const SocialMedia = () => {
           </div>
         </div>
         <div className="col-span-2">
-          <div className="w-full group hover:bg-primary h-[30vh] rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/insta1.png)] bg-cover bg-center">
+          <div className="w-full group hover:bg-primary h-[25vh]  rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/insta1.png)] bg-cover bg-center">
             <div className="relative w-full h-full rounded-xl group-hover:bg-primary/80 ">
               <div className="absolute flex items-center justify-center w-8 h-8 mt-2 rounded-full bg-gradient-to-tr top-2 left-2 from-[#feda75] via-[#d62976] to-[#962fbf] ">
                 <FaInstagram className="text-xl text-white" />
@@ -170,7 +170,7 @@ const SocialMedia = () => {
               </div>
             </div>
           </div>
-          <div className="w-full group hover:bg-primary h-[30vh] rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/instanew2.png)] mt-2 bg-cover bg-center">
+          <div className="w-full group hover:bg-primary h-[25vh]  rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/instanew2.png)] mt-2 bg-cover bg-center">
             <div className="relative w-full h-full rounded-xl group-hover:bg-primary/80 ">
               <div className="absolute flex items-center justify-center w-8 h-8 mt-2 rounded-full bg-gradient-to-tr top-2 left-2 from-[#feda75] via-[#d62976] to-[#962fbf] ">
                 <FaInstagram className="text-xl text-white" />
