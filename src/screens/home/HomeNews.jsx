@@ -9,7 +9,6 @@ import "swiper/css";
 // import "swiper/css/grid";
 import "swiper/css/pagination";
 import RangeSlider from "../../components/RangeSlider";
-import { date } from "yup";
 
 const HomeNews = () => {
   useEffect(() => {
