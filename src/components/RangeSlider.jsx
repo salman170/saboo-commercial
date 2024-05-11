@@ -17,9 +17,8 @@ const RangeSlider = ({ MIN, MAX, values, setValues, steps }) => {
     height: 50px;
     cursor: grab;
     border-radius: 30px;
-    border: 2px solid red;
+    border: 2px solid #DA251D;
     // border-color: white;
-    
     top:-22px;
     background-color: #DA251D;
     color: white;
@@ -29,6 +28,8 @@ const RangeSlider = ({ MIN, MAX, values, setValues, steps }) => {
     align-items: center;
     ring-width: 0px;
     gap: 6px;
+    outline-color: red;
+    
   }
 
   // .track-1 {
@@ -47,7 +48,6 @@ const RangeSlider = ({ MIN, MAX, values, setValues, steps }) => {
     height: 4px;
  background-color: #F4F4F4;
   }
- 
   
   `;
 
@@ -55,14 +55,15 @@ const RangeSlider = ({ MIN, MAX, values, setValues, steps }) => {
     <>
       <style>{styles}</style>
 
-      <div className="py-10 -mt-6 overflow-hidden">
+      <div className="py-10 -mt-6 overflow-hidden ">
         <Slider
           className="slider "
           min={MIN}
           max={MAX}
           step={steps}
+          //   defaultValue={5}
           onChange={setValues}
-          renderThumb={(props, state) => (
+          renderThumb={(props) => (
             <div {...props}>
               <FaAngleRight className="rotate-180" />
               Slide

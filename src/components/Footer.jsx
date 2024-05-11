@@ -13,12 +13,12 @@ const Footer = () => {
     <div className="bg-[#0C0C0C] text-white">
       {/* <div className=""> */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3">
-        <div className="flex flex-col items-center justify-between px-4 py-4 border-b lg:py-6 md:col-span-2 sm:flex-row">
+        <div className="flex flex-col items-center justify-between px-4 py-4 overflow-hidden border-b border-gray-500 lg:py-6 md:col-span-2 sm:flex-row">
           <img
             src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/footerlogomsil.png"
             alt=""
           />
-          <div className="flex gap-4 text-xl lg:gap-6 lg:text-2xl ">
+          <div className="flex gap-4 text-xl lg:gap-6 lg:text-2xl">
             <a
               href="https://twitter.com/SabooCommercial"
               target="_blank"
@@ -130,7 +130,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="px-2 py-3 lg:py-6 lg:px-4">
+        <div className="px-2 py-3 border-t border-gray-500 lg:py-6 lg:px-4 md:border-t-0">
           <ul className="text-lg font-semibold ">
             <li className="py-0.5">
               <Link to="/about">About Us</Link>
@@ -140,6 +140,12 @@ const Footer = () => {
             </li>
             <li className="py-0.5">
               <Link to="/contact-us">Contact Us</Link>
+            </li>
+            <li className="py-0.5">
+              <Link to="/privacy-policy">Privacy Policy</Link>
+            </li>
+            <li className="py-0.5">
+              <Link to="/terms-and-conditions">Terms of Use</Link>
             </li>
           </ul>
         </div>
@@ -173,16 +179,27 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <hr />
-      <div className="flex justify-between px-4 py-3 lg:py-6">
-        <div className="">
-          <p className="text-xs text-center">
+      {/* <hr /> */}
+      <div className="flex flex-col justify-between px-4 py-3 border-t border-gray-500 lg:py-6 sm:flex-row">
+      
+          <p className="text-xs sm:text-center">
             © 2024 Saboo Commercial All Rights Reserved.
           </p>
-        </div>
+        
         <div className="flex items-center gap-2 text-xs lg:gap-4">
-          <Link to="/privacy-policy">Privacy Policy</Link>
-          <Link to="/terms-and-conditions">Terms of Use</Link>
+          Powered by
+          <a
+            href="https://www.broaddcast.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white"
+          >
+            <img
+              src="https://www.broaddcast.com/assets/images/logo-white.svg"
+              alt=""
+              className="h-8 -ml-2"
+            />
+          </a>
         </div>
       </div>
       {/* </div> */}

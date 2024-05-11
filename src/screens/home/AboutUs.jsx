@@ -136,7 +136,7 @@ const AboutUs = () => {
             src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/map.gif"
             alt=""
           />
-          <div className="w-full">
+          <div className="hidden w-full md:block">
             <div className="w-full h-full p-10 border-t border-gray-200 shadow-xl rounded-xl"></div>
           </div>
         </div>

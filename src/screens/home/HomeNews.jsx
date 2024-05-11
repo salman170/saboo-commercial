@@ -9,14 +9,13 @@ import "swiper/css";
 // import "swiper/css/grid";
 import "swiper/css/pagination";
 import RangeSlider from "../../components/RangeSlider";
+import { date } from "yup";
 
 const HomeNews = () => {
-   useEffect(() => {
-     AOS.init();
-     //    AOS.init({ once: true });
-   }, []);
-
-
+  useEffect(() => {
+    AOS.init();
+    //    AOS.init({ once: true });
+  }, []);
 
   // Ref to access the Swiper instance
   const swiperRef = useRef(null);
@@ -24,108 +23,98 @@ const HomeNews = () => {
   const slidesData = [
     {
       imgSrc:
-        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/testimonials-updated/arun-jangra.png?mw=256",
-      name: "Arun Jangra",
-      description:
-        "Embark on Arun's empowering journey as he unveils the true potential of the Maruti Suzuki Super Carrys.",
-      link: "https://youtu.be/CGzlqEi8aKI",
+        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/news4.png?mw=1920",
+      name: "Maruti Suzuki launches the All-New Tour H1 – India’s favourite entry-level commercial hatchback",
+      date: "09/06/2023",
+      link: "https://www.marutisuzuki.com/corporate/media/press-releases/2023/june/maruti-suzuki-launches-the-all-new-tour-h1-indias-favourite-entry-level-commercial-hatchback",
     },
     {
       imgSrc:
-        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/testimonials-updated/parmeshwar-dandi.png?mw=256",
-      name: "Parmeshwar Dandi",
-      description:
-        "देखिए कैसे परमेश्वर सुपरकैरी के साथ अपनी जिंदगी और बिजनेस को ले जा रहे है सफलता की ओर।",
-      link: "https://youtu.be/MZqyMHYSHBw",
+        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/news5.png?mw=3840",
+      name: "Maruti Suzuki introduces new, more powerful Super Carry",
+      date: "17/04/2023",
+      link: "https://www.marutisuzuki.com/corporate/media/press-releases/2023/april/maruti-suzuki-introduces-new-more-powerful-super-carry",
     },
 
     {
       imgSrc:
-        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/testimonials-updated/pralhad-kshatriya.png?mw=256",
-      name: "Pralhad Kshatriya",
-      description:
-        "महाराष्ट्र के प्रहलाद अपनी दमदार सवारी सुपर कैरी और उसके शक्तिशाली इंजन और आरामदायक ड्राइविंग पर करते हैं पूरा भरोसा|",
-      link: "https://youtu.be/0HOE8agdnsY",
+        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/news1.png?mw=3840",
+      name: "Maruti Suzuki Commercial Vehicles: Taking India's Growth Story Ahead",
+      date: "07/03/2023",
+      link: "https://trucks.cardekho.com/en/news/detail/maruti-suzuki-commercial-vehicles-taking-india-s-growth-story-ahead-1947.html",
     },
     {
       imgSrc:
-        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/testimonials-updated/deepak-shaukeen.png?mw=256",
-      name: "Deepak Shaukeen",
-      description:
-        "बेहतर माइलेज, विशाल केबिन, CNG के साथ-साथ एक 5 लीटर का इमरजेंसी पेट्रोल टैंक के साथ Maruti Suzuki Super Carry है दीपक का परफ़ेक्ट बिज़नेस पार्टनर|",
-      link: "https://youtu.be/rsXAeX7k-og",
+        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/news2.png?mw=3840",
+      name: "5 Key Things To Keep In Mind When Buying A Mini-Truck in India",
+      date: "30/11/2022",
+      link: "https://trucks.cardekho.com/en/news/detail/5-key-things-to-keep-in-mind-when-buying-a-mini-truck-in-india-1915.html",
     },
 
     {
       imgSrc:
-        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/testimonials-updated/jagdish-khatri.png?mw=96",
-      name: "Jagdish Khatri",
-      description:
-        "Discover the inspiring story of Jagdish, who achieved success with his trust in Maruti Suzuki Commercial.",
-      link: "https://youtu.be/zU8KydYFLOs",
+        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/news3.png?mw=3840",
+      name: "Maruti Suzuki Commercial: a one-stop solution for customers’ business needs",
+      date: "25/02/2022 ",
+      link: "https://www.autocarindia.com/auto-features/branded-content-maruti-suzuki-commercial-a-one-stop-solution-for-customers-business-needs-423669",
     },
     {
       imgSrc:
-        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/testimonials-updated/jaspreet-singh.png?mw=96",
-      name: "Jaspreet Singh",
-      description:
-        "यह एक Maruti Suzuki Super Carry से शुरू होकर अब चार होने तक की, जसप्रीत के ट्रांसपोर्ट व्यवसाय की तरक्की की दमदार कहानी है|",
-      link: "https://youtu.be/81s8Ky6cyuI",
+        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/news8.png?mw=3840",
+      name: "'4 Saal Tarakki Ke' India’s powerful mini truck, Super Carry celebrates 4 phenomenal years",
+      date: "25/12/2020",
+      link: "https://www.marutisuzuki.com/corporate/media/press-releases/2020/december/4-saal-tarakki-ke-india-s-powerful-mini-truck-super-carry-celebrates-4-phenomenal-years",
     },
 
     {
       imgSrc:
-        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/testimonials-updated/amit-mankani.png?mw=96",
-      name: "Amit Mankani",
-      description:
-        "Explore Amit's journey as he found the perfect business partner in the Maruti Suzuki Super Carry, elevating his food business.",
-      link: "https://youtu.be/HFRfmRoBLNA",
+        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/news9.png?mw=3840",
+      name: "Maruti Suzuki expands the Commercial network portfolio with extensive Tour range",
+      date: "16/03/2020",
+      link: "https://www.marutisuzuki.com/corporate/media/press-releases/2020/march/maruti-suzuki-expands-the-commercial-network-portfolio-with-extensive-tour-range",
     },
     {
       imgSrc:
-        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/testimonials-updated/kunal-gujale.png?mw=96",
-      name: "Kunal Gujale",
-      description:
-        "देखिए कैसे मारुति सुज़ुकी कमर्शियल की मदद से कुणाल ने चुना अपना तरक़्क़ी का साथी।",
-      link: "https://youtu.be/DMuSONLbIeo",
+        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/news6.png?mw=3840",
+      name: "Maruti Suzuki Super Carry celebrates three glorious years in India with over 50,000 delighted customers",
+      date: "12/12/2019",
+      link: "https://www.marutisuzuki.com/corporate/media/press-releases/2019/december/maruti-suzuki-super-carry-celebrates-three-glorious-years-in-india",
     },
 
     {
       imgSrc:
-        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/testimonials-updated/akashdeep.png?mw=96",
-      name: "Aakashdeep",
-      description:
-        "यह Maruti Suzuki Super Carry के साथ आकाशदीप की बाधाओं को पार करने और सफलता पाने की तरक्की की दमदार कहानी है|",
-      link: "https://youtu.be/3fHpTjj0oGU",
+        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/newsimgs.png?mw=3840",
+      name: "Maruti Suzuki ups the ante in Commercial Segment with 300th showroom",
+      date: "13/05/2019",
+      link: "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/newsimgs.png?mw=3840",
     },
     {
       imgSrc:
-        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/testimonials-updated/haresh-rathore.png?mw=96",
-      name: "Haresh Rathor",
-      description:
-        "Witness Haresh enjoying comfortable driving and savings on the go with his Maruti Suzuki Super Carry.",
-      link: "https://youtu.be/fsfkZJYQs20",
+        "https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/newsandarticle/newsimgs.png?mw=3840",
+      name: "Fastest rollout of auto retail channel: Maruti Suzuki unveils its 250th Commercial Showroom",
+
+      date: "02/11/2018",
+      link: "https://www.marutisuzuki.com/corporate/media/press-releases/2018/november/fastest-rollout-of-auto-retail-channel-maruti-suzuki-unveils-its-250th-commercial-showroom",
     },
   ];
 
-//   const handleNext = () => {
-//     if (
-//       swiperRef.current &&
-//       swiperRef.current.activeIndex < swiperRef.current.slides.length - 1
-//     ) {
-//       setActiveSlide(activeSlide + 1);
-//     }
-//   };
+  //   const handleNext = () => {
+  //     if (
+  //       swiperRef.current &&
+  //       swiperRef.current.activeIndex < swiperRef.current.slides.length - 1
+  //     ) {
+  //       setActiveSlide(activeSlide + 1);
+  //     }
+  //   };
 
-//   // Function to handle the "Previous" button click
-//   const handlePrevious = () => {
-//     if (swiperRef.current && activeSlide > 0) {
-//       setActiveSlide(activeSlide - 1);
-//     }
-//   };
+  //   // Function to handle the "Previous" button click
+  //   const handlePrevious = () => {
+  //     if (swiperRef.current && activeSlide > 0) {
+  //       setActiveSlide(activeSlide - 1);
+  //     }
+  //   };
 
   // Update the Swiper instance when the active slide index changes
-
 
   return (
     <div className="px-1 pb-10 md:pb-12 lg:pb-16">
@@ -169,7 +158,7 @@ const HomeNews = () => {
             },
           }}
           spaceBetween={30}
-          className="my-10 mySwiper"
+          className="my-10 mySwiper2"
           //   navigation={true}
           //   modules={[Navigation]}
         >
@@ -177,19 +166,29 @@ const HomeNews = () => {
             <SwiperSlide key={index} className="w-1/3 h-full p-2 ">
               <div
                 data-aos="zoom-in"
-                data-aos-delay={100 * index }
+                data-aos-delay={100 * index}
                 data-aos-duration="500"
-                className="w-full px-4 py-6 mb-2 text-center bg-white border rounded-lg shadow-lg lg:py-10 lg:px-6"
+                className="w-full mb-2 overflow-hidden bg-white "
               >
-                <div className="relative">
-                  <img
-                    src={slide.imgSrc}
-                    alt={slide.name}
-                    className="mx-auto rounded-full "
-                  />
+                <a href={slide.link} target="_blank" rel="noreferrer">
+                  <div className="relative">
+                    <img
+                      src={slide.imgSrc}
+                      alt={slide.name}
+                      className="w-full rounded-lg"
+                    />
+                  </div>
+                </a>
+                <div className="pt-4 pb-2 text-sm font-semibold newsText">
+                  {slide.name}
                 </div>
-                <div className="pt-4 pb-2 font-semibold">{slide.name}</div>
-                <div className="text-xs lg:h-12">{slide.description}</div>
+                <div className="text-xs">{slide.date}</div>
+                <a href={slide.link} target="_blank" rel="noreferrer">
+                  <button className="px-4 py-1.5 text-xs bg-white border rounded hover:shadow-xl shadow-black text-primary hover:text-white hover:bg-primary mt-2 ">
+                    Read Now
+                  </button>{" "}
+                </a>
+                {/* <div className="text-xs lg:h-12">{slide.description}</div> */}
               </div>
             </SwiperSlide>
           ))}

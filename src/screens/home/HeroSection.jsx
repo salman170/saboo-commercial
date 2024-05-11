@@ -19,7 +19,7 @@ const HeroSection = () => {
           dynamicBullets: true,
           clickable: true,
         }}
-        loop={true}
+        // loop={true}
         centeredSlides={true}
         // navigation={true}
 
