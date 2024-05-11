@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AboutUs from "./AboutUs";
 import HomeNews from "./HomeNews";
 import SocialMedia from "./SocialMedia";
+import Enquiry from "./Enquiry";
 
 // Ensure ScrollTrigger is registered with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -71,6 +72,7 @@ const Home = () => {
       <AboutUs />
       <HomeNews />
       <SocialMedia />
+      <Enquiry />
     </div>
   );
 };

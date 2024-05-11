@@ -1,7 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,7 +12,6 @@ import { FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 
 const HeroSection = () => {
- 
   return (
     <div className="relative overflow-hidden bg-primary">
       <Swiper

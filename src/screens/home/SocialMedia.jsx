@@ -79,7 +79,7 @@ const SocialMedia = () => {
             </div>
           </div>
         </div>
-        <div className="w-full  hover:bg-primary h-[60vh] rounded-xl col-span-4">
+        <div className="w-full  hover:bg-primary h-[60.5vh] rounded-xl col-span-4 ">
           <div className="w-full group hover:bg-primary h-full rounded-xl bg-[url(https://static.marutisuzukicommercial.com/-/media/msilcommercial/knowmore/twitternew.png)] bg-cover bg-center">
             <div className="relative w-full h-full rounded-xl group-hover:bg-primary/80 ">
               <div className="absolute flex items-center justify-center w-8 h-8 mt-2 bg-black rounded-full top-2 left-2 ">
