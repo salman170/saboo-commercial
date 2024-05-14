@@ -18,7 +18,7 @@ const Home = () => {
     // New animation for.slider_img that triggers on scroll
     gsap.fromTo(
       ".slider_img",
-      { opacity: 0, y: 100 },
+      { opacity: 0, y: 100,duration: 2, ease: "power1.inOut"},
       {
         opacity: 1,
         duration: 2,
@@ -27,7 +27,7 @@ const Home = () => {
 
         scrollTrigger: {
           trigger: ".slider_img",
-          start: "top 85%",
+          start: "top 95%",
           end: "bottom bottom",
           // start: "bottom 10%", // Adjust this value to control when the animation starts
           // end: "bottom center", // Adjust this value to control when the animation ends
