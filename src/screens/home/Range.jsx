@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Autoplay, Navigation } from "swiper/modules";
 import CountUp from "react-countup";
+import { Link } from "react-router-dom";
 
 const Range = () => {
   const [selected, setSelected] = useState(1);
@@ -166,6 +167,16 @@ const Range = () => {
               className="h-6 w-min"
             />
           )}
+        </div>
+        <div className="flex items-center justify-center h-6 mt-10 ">
+          <Link to={activeSlide ? "/eeco-cargo" : "/super-carry"}>
+            <button
+              aria-label={activeSlide ? "/eeco-cargo" : "/super-carry"} 
+              className="px-4 py-2 text-sm text-white border rounded bg-primary hover:text-primary hover:bg-transparent border-primary"
+            >
+              Explore
+            </button>
+          </Link>
         </div>
       </div>
     </div>

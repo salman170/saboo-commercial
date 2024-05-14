@@ -1,6 +1,7 @@
-// import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   //  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
@@ -22,9 +23,15 @@ const Header = () => {
   //    };
   //  }, [prevScrollPos]);
 
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div
-      className="sticky top-0 left-0 z-20 w-full px-2 py-1 bg-white lg:px-4"
+      className="sticky top-0 left-0 z-20 w-full px-2 bg-white lg:px-4"
       // style={{
       //   transform: visible ? "translateY(0)" : "translateY(-100%)",
       //   transition: "transform 0.3s ease",
@@ -45,7 +52,10 @@ const Header = () => {
             to="/"
             className="flex flex-col justify-between hover:text-primary group"
           >
-            <p className="py-6 lg:py-7">Vehicle Range</p>
+            <p className="flex items-center gap-1 py-6 lg:py-7 group">
+              Vehicle Range
+              <IoMdArrowDropdown className="text-lg duration-500 group-hover:-rotate-180" />
+            </p>
             <div className=" h-[3px] bg-primary group-hover:w-full w-0 duration-500"></div>
           </Link>
           <Link

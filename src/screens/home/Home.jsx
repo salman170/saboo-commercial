@@ -15,19 +15,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   useGSAP(() => {
-    // Your existing animation for.social_links
-    gsap.fromTo(
-      ".social_links",
-      { opacity: 0, x: 100 },
-      {
-        opacity: 1,
-        duration: 0.5,
-        x: 0,
-        ease: "power1.inOut",
-        stagger: 0.2,
-      }
-    );
-
     // New animation for.slider_img that triggers on scroll
     gsap.fromTo(
       ".slider_img",
