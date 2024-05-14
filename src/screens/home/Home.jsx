@@ -70,11 +70,11 @@ const Home = () => {
   return (
     <div className="">
       <HeroSection />
+      <Enquiry />
       <Range />
       <AboutUs />
       <HomeNews />
       <SocialMedia />
-      <Enquiry />
       <ScrollingSection />
     </div>
   );

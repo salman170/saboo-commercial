@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 // import "swiper/css/grid";
 import "swiper/css/pagination";
-import {  Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { IoVideocam } from "react-icons/io5";
 
 const AboutUs = () => {
@@ -16,7 +16,7 @@ const AboutUs = () => {
     AOS.init();
     //    AOS.init({ once: true });
   }, []);
-  
+
   const slidesData = [
     [
       {

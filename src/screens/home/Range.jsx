@@ -33,7 +33,7 @@ const Range = () => {
             selected === 1 && "border-primary text-primary"
           }`}
         >
-          Goods Carries
+          Goods Carrier
           <IoMdArrowDropdown
             className={`text-primary text-4xl absolute left-1/2 -translate-x-1/2 top-7 -mt-1 sm:-mt-0.5 ${
               selected === 1 ? "block" : "hidden"

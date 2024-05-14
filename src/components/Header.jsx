@@ -21,10 +21,10 @@ const Header = () => {
   //      window.removeEventListener("scroll", handleScroll);
   //    };
   //  }, [prevScrollPos]);
-   
+
   return (
     <div
-      className="sticky top-0 left-0 z-20 w-full px-2 bg-white shadow-md lg:px-4"
+      className="sticky top-0 left-0 z-20 w-full px-2 py-1 bg-white lg:px-4"
       // style={{
       //   transform: visible ? "translateY(0)" : "translateY(-100%)",
       //   transition: "transform 0.3s ease",
