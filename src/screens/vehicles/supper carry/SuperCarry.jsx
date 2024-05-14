@@ -14,7 +14,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import SocialMediaIcons from "../../../components/SocialMediaIcons";
 import { Navigation, Autoplay } from "swiper/modules";
-import { BsArrowLeft } from "react-icons/bs";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const SuperCarry = () => {
   useEffect(() => {
@@ -101,13 +101,11 @@ const SuperCarry = () => {
                   />
                 </div>
               </SwiperSlide>
-              <div
-                data-aos="zoom-in"
-                data-aos-delay="700"
-                data-aos-duration="700"
-                className="flex justify-center gap-4 mt-3 md:justify-start"
-              >
+              <div className="flex justify-center gap-4 mt-3 md:justify-start">
                 <button
+                  data-aos="zoom-in"
+                  data-aos-delay="900"
+                  data-aos-duration="700"
                   aria-label="Previous"
                   type="button"
                   className="flex items-center justify-center text-white cursor-pointer group "
@@ -116,12 +114,15 @@ const SuperCarry = () => {
                   <BsArrowLeft className="text-2xl text-white duration-500 group-hover:text-primary " />
                 </button>
                 <button
+                  data-aos="zoom-in"
+                  data-aos-delay="700"
+                  data-aos-duration="700"
                   aria-label="Next"
                   type="button"
                   className="flex items-center justify-center text-white rotate-180 cursor-pointer group "
                   ref={navigationNextRef}
                 >
-                  <BsArrowLeft className="text-2xl text-white duration-500 group-hover:text-primary " />
+                  <BsArrowRight className="text-2xl text-white duration-500 group-hover:text-primary " />
                 </button>
               </div>
             </Swiper>
