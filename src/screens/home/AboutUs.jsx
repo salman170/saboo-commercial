@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 // import "swiper/css/grid";
 import "swiper/css/pagination";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { IoVideocam } from "react-icons/io5";
 
 const AboutUs = () => {
@@ -179,14 +179,14 @@ const AboutUs = () => {
                 },
               }}
               // loop={true}
-              // autoplay={{
-              //   delay: 6000,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 6000,
+                disableOnInteraction: false,
+              }}
               spaceBetween={30}
               className="my-10 mySwiper"
-              navigation={true}
-              modules={[Navigation]}
+              // navigation={true}
+              modules={[Navigation,Autoplay]}
             >
               {slidesData.map((slide, index) => (
                 <SwiperSlide key={index} className="h-full ">

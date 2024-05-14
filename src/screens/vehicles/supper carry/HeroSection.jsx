@@ -31,7 +31,7 @@ const HeroSection = () => {
         className="bg-gradient-to-b  from-white to-[#D0E2FC] h-[85vh] md:h-[73vh] relative overflow-hidden"
         // style={{backgroundImage: `url(${banner1})`}}
       >
-        <div className="absolute z-20 -translate-x-1/2 -translate-y-1/2 md:top-1/2 md:left-10 bottom-20 left-1/2 md:translate-x-4 md:translate-y-0">
+        <div className="absolute z-10 -translate-x-1/2 -translate-y-1/2 md:top-1/2 md:left-10 bottom-20 left-1/2 md:translate-x-4 md:translate-y-0">
           <div className="select-none w-96">
             <Swiper
               className=""

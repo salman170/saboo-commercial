@@ -31,13 +31,13 @@ const Header = () => {
 
   return (
     <div
-      className="sticky top-0 left-0 z-20 w-full px-2 bg-white lg:px-4"
+      className="sticky top-0 left-0 z-40 w-full px-2 bg-white lg:px-4"
       // style={{
       //   transform: visible ? "translateY(0)" : "translateY(-100%)",
       //   transition: "transform 0.3s ease",
       // }}
     >
-      <div className="container flex items-center justify-between h-full px-1 mx-auto ">
+      <div className="flex items-center justify-between h-full px-1 ">
         <div>
           <Link to="/">
             <img
