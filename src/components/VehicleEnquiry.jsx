@@ -49,7 +49,7 @@ const VehicleEnquiry = () => {
             />
           </div>
 
-          <div className="mt-5 lg:col-span-2">
+          <div className="mt-2 lg:col-span-2">
             <button className="  px-8 py-2 lg:py-2.5 text-white   rounded-full  md:w-48  bg-primary duration-500  hover:shadow-xl hover:shadow-primary/50   sm:text-sm">
               Submit
             </button>
@@ -79,12 +79,12 @@ const VehicleEnquiry = () => {
                 <option value="615000">Super Carry CNG Chassis</option>
               </select>
             </div>
-            <h3 className="mb-2 text-4xl font-semibold text-gray-800 mt-7">
+            <h3 className="mb-2 text-3xl font-semibold text-gray-800 mt-7">
               {/* <span className="text-3xl text-primary">₹</span>{" "} */}
               {CurrencyFormatter.format(variant)}
               {/* <span className="text-2xl">* </span> */}
             </h3>
-            <p className="text-gray-500 ">*Ex-Showroom Price</p>
+            <p className="text-sm text-gray-500">*Ex-Showroom Price</p>
           </div>
         </div>
       </div>

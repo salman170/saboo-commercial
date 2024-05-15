@@ -128,7 +128,7 @@ const Range = () => {
           <SwiperSlide>
             <div className="flex items-center justify-center opacity-0 slider_img ">
               <img
-                src={require("../../assets/vehicles/super_carry/Super Carry.webp")}
+                src={require("../../assets/vehicles/super_carry/others/Super Carry.webp")}
                 alt=""
                 className=""
               />
@@ -162,7 +162,7 @@ const Range = () => {
             />
           ) : (
             <img
-              src={require("../../assets/vehicles/super_carry/new super carry logo.webp")}
+              src={require("../../assets/vehicles/super_carry/others/new super carry logo.webp")}
               alt=""
               className="h-6 w-min"
             />

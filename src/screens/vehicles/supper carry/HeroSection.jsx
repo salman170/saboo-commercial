@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import banner1 from "../../../assets/vehicles/super_carry/Home/supercarrydisclaimerjato.webp";
-import banner2 from "../../../assets/vehicles/super_carry/Home/supercarrymobiledisclaimerNew.webp";
+import banner1 from "../../../assets/vehicles/super_carry/home/supercarrydisclaimerjato.webp";
+import banner2 from "../../../assets/vehicles/super_carry/home/supercarrymobiledisclaimerNew.webp";
 import {
   HiOutlineClipboardDocumentList,
   HiOutlineDocumentArrowDown,
@@ -60,7 +60,7 @@ const HeroSection = () => {
                     data-aos="zoom-in"
                     data-aos-delay="400"
                     data-aos-duration="700"
-                    src={require("../../../assets/vehicles/super_carry/Home/PetrolStdCarousel.webp")}
+                    src={require("../../../assets/vehicles/super_carry/home/PetrolStdCarousel.webp")}
                     alt=""
                     className=""
                   />
@@ -72,7 +72,7 @@ const HeroSection = () => {
                     data-aos="zoom-in"
                     data-aos-delay="500"
                     data-aos-duration="700"
-                    src={require("../../../assets/vehicles/super_carry/Home/CNGstdCarousel.webp")}
+                    src={require("../../../assets/vehicles/super_carry/home/CNGstdCarousel.webp")}
                     alt=""
                     className=""
                   />
@@ -84,7 +84,7 @@ const HeroSection = () => {
                     data-aos="zoom-in"
                     data-aos-delay="600"
                     data-aos-duration="700"
-                    src={require("../../../assets/vehicles/super_carry/Home/PetrolChassisCarousel.webp")}
+                    src={require("../../../assets/vehicles/super_carry/home/PetrolChassisCarousel.webp")}
                     alt=""
                     className=""
                   />
@@ -96,7 +96,7 @@ const HeroSection = () => {
                     data-aos="zoom-in"
                     data-aos-delay="700"
                     data-aos-duration="700"
-                    src={require("../../../assets/vehicles/super_carry/Home/CNGChassisCarousel.webp")}
+                    src={require("../../../assets/vehicles/super_carry/home/CNGChassisCarousel.webp")}
                     alt=""
                     className=""
                   />
