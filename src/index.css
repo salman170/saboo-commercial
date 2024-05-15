@@ -44,3 +44,37 @@ body {
 .carSlider .swiper-wrapper {
   transition-duration: 0.8s ease !important;
 }
+
+
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  /* background: var(--primary); Adjust background color */
+  border-radius: 1px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  /* border-radius: 100%; */
+  border: 2px solid var(--primary);
+}
+
+:root {
+  --primary: rgba(255, 255, 255, 0.8); /* Adjust alpha channel to control transparency */
+  --secondary: rgb(218, 37, 29);
+}
+
+/* *::-webkit-scrollbar:hover {
+  background-color: rgb(255, 255, 255);
+  width: 8px;
+}
+
+/* Change secondary color to gray on hover 
+*::-webkit-scrollbar-thumb:hover {
+  width: 8px;
+} */

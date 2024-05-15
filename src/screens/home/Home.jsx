@@ -14,11 +14,12 @@ import ScrollingSection from "./ScrollingSection";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+
   useGSAP(() => {
     // New animation for.slider_img that triggers on scroll
     gsap.fromTo(
       ".slider_img",
-      { opacity: 0, y: 100,duration: 2, ease: "power1.inOut"},
+      { opacity: 0, y: 100, duration: 2, ease: "power1.inOut" },
       {
         opacity: 1,
         duration: 2,
@@ -36,6 +37,24 @@ const Home = () => {
         },
       }
     );
+
+ 
+
+
+    // gsap.to(".scorllingCar", {
+    //   duration: 4,
+    //   right: "10%",
+    //   ease: "power1.inOut",
+    //   scrollTrigger: {
+    //     trigger: ".scorllingCar",
+    //     start: "top 50%",
+    //     end: "bottom bottom",
+    //     // start: "bottom 10%", // Adjust this value to control when the animation starts
+    //     // end: "bottom center", // Adjust this value to control when the animation ends
+    //     scrub: true, // Smoothly transition the animation based on scroll position
+    //     // markers: true, // Show markers for testing purposes
+    //   },
+    // });
 
     // timeline.to(".scorllingDiv", {
     //   duration: 2,

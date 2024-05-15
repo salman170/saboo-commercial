@@ -24,6 +24,7 @@ const HeroSection = () => {
 
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
+  
 
   return (
     <div>
