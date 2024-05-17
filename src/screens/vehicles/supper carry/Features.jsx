@@ -1,9 +1,65 @@
 import React from "react";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useGSAP } from "@gsap/react";
 
 const Features = () => {
+// useGSAP(() => {
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   // Create a timeline
+//   const tl = gsap.timeline();
+
+//   tl.to(".outer_container", {
+//     duration: 2,
+//     position: "fixed",
+//     width: "100%",
+//     top: 0,
+//     left: 0,
+//     ease: "power1.inOut",
+//   });
+
+//   tl.to(".feature_2", {
+//     duration: 2,
+//     y: "-90%",
+//     opacity: 1,
+//     visibility: "visible",
+//     ease: "power1.inOut",
+//   });
+
+//   tl.to(".feature_3", {
+//     duration: 2,
+//     y: "-190%",
+//     opacity: 1,
+//     visibility: "visible",
+//     ease: "power1.inOut",
+//   });
+
+//   tl.to(".outer_container", {
+//     duration: 2,
+//     // position: "static",
+//     // display:"none",
+//     width: "100%",
+//     top: 0,
+//     left: 0,
+//     ease: "power1.inOut",
+//   });
+
+//   // Add ScrollTrigger to each animation
+//   ScrollTrigger.create({
+//     trigger: ".outer_container",
+//     start: "bottom bottom",
+//     end: "bottom bottom",
+//     scrub: true,
+//     markers: true,
+//     animation: tl,
+//   });
+// });
+
+
   return (
-    <div className="h-[200vh]">
-      <div className="sticky overflow-hidden top-20">
+    <div className="h-[200vh] relative">
+      <div className="sticky overflow-hidden top-20 outer_container">
         <div className="container px-1 py-10 mx-auto lg:pt-20 lg:pb-20 md:max-w-6xl">
           <h2 className="bg-[#616161] text-2xl font-semibold text-white py-2 w-min rounded-md px-4 -skew-x-12 uppercase">
             Features
@@ -14,13 +70,35 @@ const Features = () => {
           <h5 className="mt-2 text-2xl font-light -skew-x-12 md:text-3xl">
             With Super Features
           </h5>
-          <div className="flex flex-col gap-8 py-4 mt-8 lg:mt-16 md:flex-row md:gap-10 lg:gap-20 md:mt-12">
-            <div className="bg-white shadow-xl rounded-3xl">
+          <div className="flex flex-col gap-8 py-4 mt-8 lg:mt-10 md:flex-row md:gap-10 lg:gap-20 md:mt-10 h-[25rem] ">
+            <div className="relative ">
+              <div className="bg-white shadow-xl rounded-3xl feature_1">
+                <img
+                  src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_1.png"
+                  alt=""
+                  className="mx-auto my-10 lg:h-72"
+                />
+              </div>
               <img
-                src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_1.png?"
+                src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_6.png"
                 alt=""
-                className="mx-auto my-10 lg:h-72"
+                className="invisible mx-auto mt-10 shadow-xl opacity-0 rounded-3xl feature_2 shadow-black"
               />
+              <img
+                src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_3.png"
+                alt=""
+                className="invisible mx-auto mt-10 shadow-xl opacity-0 rounded-3xl feature_3 shadow-black"
+              />
+              {/* <img
+                src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_4.png"
+                alt=""
+                className="mx-auto mt-10 rounded-3xl feature_4"
+              />
+              <img
+                src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_5.png"
+                alt=""
+                className="mx-auto mt-10 rounded-3xl feature_5"
+              /> */}
             </div>
             <div className="overflow-hidden">
               <h5 className="mt-4 mb-4 text-2xl font-semibold uppercase lg:mb-8 md:text-3xl md:mb-6">
