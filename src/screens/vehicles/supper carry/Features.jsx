@@ -4,58 +4,57 @@ import React from "react";
 // import { useGSAP } from "@gsap/react";
 
 const Features = () => {
-// useGSAP(() => {
-//   gsap.registerPlugin(ScrollTrigger);
+  // useGSAP(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-//   // Create a timeline
-//   const tl = gsap.timeline();
+  //   // Create a timeline
+  //   const tl = gsap.timeline();
 
-//   tl.to(".outer_container", {
-//     duration: 2,
-//     position: "fixed",
-//     width: "100%",
-//     top: 0,
-//     left: 0,
-//     ease: "power1.inOut",
-//   });
+  //   tl.to(".outer_container", {
+  //     duration: 2,
+  //     position: "fixed",
+  //     width: "100%",
+  //     top: 0,
+  //     left: 0,
+  //     ease: "power1.inOut",
+  //   });
 
-//   tl.to(".feature_2", {
-//     duration: 2,
-//     y: "-90%",
-//     opacity: 1,
-//     visibility: "visible",
-//     ease: "power1.inOut",
-//   });
+  //   tl.to(".feature_2", {
+  //     duration: 2,
+  //     y: "-90%",
+  //     opacity: 1,
+  //     visibility: "visible",
+  //     ease: "power1.inOut",
+  //   });
 
-//   tl.to(".feature_3", {
-//     duration: 2,
-//     y: "-190%",
-//     opacity: 1,
-//     visibility: "visible",
-//     ease: "power1.inOut",
-//   });
+  //   tl.to(".feature_3", {
+  //     duration: 2,
+  //     y: "-190%",
+  //     opacity: 1,
+  //     visibility: "visible",
+  //     ease: "power1.inOut",
+  //   });
 
-//   tl.to(".outer_container", {
-//     duration: 2,
-//     // position: "static",
-//     // display:"none",
-//     width: "100%",
-//     top: 0,
-//     left: 0,
-//     ease: "power1.inOut",
-//   });
+  //   tl.to(".outer_container", {
+  //     duration: 2,
+  //     // position: "static",
+  //     // display:"none",
+  //     width: "100%",
+  //     top: 0,
+  //     left: 0,
+  //     ease: "power1.inOut",
+  //   });
 
-//   // Add ScrollTrigger to each animation
-//   ScrollTrigger.create({
-//     trigger: ".outer_container",
-//     start: "bottom bottom",
-//     end: "bottom bottom",
-//     scrub: true,
-//     markers: true,
-//     animation: tl,
-//   });
-// });
-
+  //   // Add ScrollTrigger to each animation
+  //   ScrollTrigger.create({
+  //     trigger: ".outer_container",
+  //     start: "bottom bottom",
+  //     end: "bottom bottom",
+  //     scrub: true,
+  //     markers: true,
+  //     animation: tl,
+  //   });
+  // });
 
   return (
     <div className="h-[200vh] relative">

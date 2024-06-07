@@ -28,7 +28,7 @@ const Enquiry = () => {
             data-aos-duration="500"
             className="py-6 text-xl font-medium text-center lg:py-10 md:text-2xl lg:text-3xl"
           >
-            ENQUIRE NOW
+            ENQUIRE NOW 
           </div>
           <div
             data-aos="zoom-in"
@@ -56,33 +56,33 @@ const Enquiry = () => {
                   name="name"
                   type="text"
                   placeholder="Name*"
-                  className="w-full px-4 py-3 border rounded lg:p-6"
+                  className="w-full px-4 py-3 border rounded-full lg:p-6"
                 />
-                <ErrorMessage name="name" />
+                <ErrorMessage name="name" className="text-sm text-primary" />
               </div>
               <div>
                 <Field
                   name="email"
                   type="email"
                   placeholder="Email*"
-                  className="w-full px-4 py-3 border rounded lg:p-6"
+                  className="w-full px-4 py-3 border rounded-full lg:p-6"
                 />
-                <ErrorMessage name="email" />
+                <ErrorMessage name="email" className="text-sm text-primary" />
               </div>
               <div>
                 <Field
                   name="phone"
                   type="text"
                   placeholder="Phone*"
-                  className="w-full px-4 py-3 border rounded lg:p-6"
+                  className="w-full px-4 py-3 border rounded-full lg:p-6"
                 />
-                <ErrorMessage name="phone" />
+                <ErrorMessage name="phone" className="text-sm text-primary" />
               </div>
               <div>
                 <Field
                   name="vehicle"
                   as="select"
-                  className="w-full px-4 py-3 border rounded lg:p-6"
+                  className="w-full px-4 py-3 border rounded-full lg:p-6"
                   placeholder="Select Vehicle*"
                 >
                   <option value="" disabled>
@@ -92,13 +92,14 @@ const Enquiry = () => {
                   <option value="vehicle2">Vehicle 2</option>
                   {/* Add more options as needed */}
                 </Field>
-                <ErrorMessage name="vehicle" />
+                <ErrorMessage name="vehicle" className="text-sm text-primary" />
               </div>
 
-              <div>
+              <div className="flex justify-center md:col-span-2">
                 <button
-                  className="px-4 py-2.5 text-sm text-white bg-gray-300 rounded-lg md:px-8"
-                  disabled
+                  className="px-4 py-2.5 text-sm text-white bg-gray-300 rounded-full md:px-8 md:py-4 lg:px-12 hover:bg-primary hover:text-white hover:shadow-lg duration-200 "
+                  type="submit"
+                  // disabled= {isSubmitting}
                 >
                   Submit
                 </button>

@@ -2,7 +2,13 @@ import React from "react";
 import { FaTruck } from "react-icons/fa";
 
 const Specification = () => {
-  // const [added, setAdded] = React.useState([true, false, false, false]);
+  const [added, setAdded] = React.useState({
+    superCarryPetrol: true,
+    superCarryCNG: false,
+    superCarryChasis: false,
+    superCarryCNGChasis: false,
+  });
+  const [total, setTotal] = React.useState(1);
   const rows = [
     { id: 1, name: "Measurement", value: "" },
     { id: 2, name: "Height", value: "1883 mm" },
@@ -17,6 +23,15 @@ const Specification = () => {
     { id: 11, name: "Height of Deck", value: "300" },
     { id: 12, name: "Transmission", value: "+" },
   ];
+
+  const handleCheckboxChange = (key) => {
+    setAdded((prevAdded) => {
+      const newState = { ...prevAdded, [key]: !prevAdded[key] };
+      const newTotal = Object.values(newState).filter((value) => value).length;
+      setTotal(newTotal);
+      return newState;
+    });
+  };
 
   return (
     <div className="">
@@ -37,40 +52,118 @@ const Specification = () => {
             </div>
             <p className="font-semibold">Specification</p>
           </div>
-          <div className="w-1/5 ">
-            <img
-              src={require("../../../assets/vehicles/super_carry/specifications/Brand-supercarry 2.webp")}
-              alt=""
-              className="h-20 -mt-20"
-            />
-            <p className="font-semibold ">Super Carry Petrol</p>
-          </div>
-          <div className="w-1/5 ">
-            <img
-              src={require("../../../assets/vehicles/super_carry/specifications/SupercarryCNG-thumbnail-new.webp")}
-              alt=""
-              className="h-20 -mt-20"
-            />
-            <p className="font-semibold ">Super Carry CNG</p>
-          </div>
-          <div className="w-1/5 ">
-            <img
-              src={require("../../../assets/vehicles/super_carry/specifications/supercarry-cab-chasis 1.webp")}
-              alt=""
-              className="h-24 -mt-20"
-            />
-            <p className="font-semibold ">Super Carry Chasis</p>
-          </div>
-          <div className="w-1/5 ">
-            <img
-              src={require("../../../assets/vehicles/super_carry/specifications/supercarry-CNG-chasis 3.webp")}
-              alt=""
-              className="h-24 -mt-20"
-            />
-            <p className="font-semibold ">Super Carry CNG Chasis</p>
+          {added.superCarryPetrol && (
+            <div className="w-1/5 ">
+              <img
+                src={require("../../../assets/vehicles/super_carry/specifications/Brand-supercarry 2.webp")}
+                alt=""
+                className="h-20 -mt-14"
+              />
+              <p className="font-semibold ">Super Carry Petrol</p>
+              {total > 1 && (
+                <div
+                  onClick={() => handleCheckboxChange("superCarryPetrol")}
+                  className="text-sm underline cursor-pointer hover:text-red-500"
+                >
+                  Remove
+                </div>
+              )}
+            </div>
+          )}
+          {added.superCarryCNG && (
+            <div className="w-1/5 ">
+              <img
+                src={require("../../../assets/vehicles/super_carry/specifications/SupercarryCNG-thumbnail-new.webp")}
+                alt=""
+                className="h-20 -mt-20"
+              />
+              <p className="font-semibold ">Super Carry CNG</p>
+              {total > 1 && (
+                <div
+                  onClick={() => handleCheckboxChange("superCarryCNG")}
+                  className="text-sm underline cursor-pointer hover:text-red-500"
+                >
+                  Remove
+                </div>
+              )}
+            </div>
+          )}
+          {added.superCarryChasis && (
+            <div className="w-1/5 ">
+              <img
+                src={require("../../../assets/vehicles/super_carry/specifications/supercarry-cab-chasis 1.webp")}
+                alt=""
+                className="h-24 -mt-20"
+              />
+              <p className="font-semibold ">Super Carry Chasis</p>
+              {total > 1 && (
+                <div
+                  onClick={() => handleCheckboxChange("superCarryChasis")}
+                  className="text-sm underline cursor-pointer hover:text-red-500"
+                >
+                  Remove
+                </div>
+              )}
+            </div>
+          )}
+          {added.superCarryCNGChasis && (
+            <div className="w-1/5 ">
+              <img
+                src={require("../../../assets/vehicles/super_carry/specifications/supercarry-CNG-chasis 3.webp")}
+                alt=""
+                className="h-24 -mt-20"
+              />
+              <p className="font-semibold ">Super Carry CNG Chasis</p>
+              {total > 1 && (
+                <div
+                  onClick={() => handleCheckboxChange("superCarryCNGChasis")}
+                  className="text-sm underline cursor-pointer hover:text-red-500"
+                >
+                  Remove
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+        <div className="flex py-2">
+          <div className="w-1/5"></div>
+          <div className="flex justify-between w-4/5 px-2 text-sm ">
+            <div>
+              <input
+                type="checkbox"
+                checked={added.superCarryPetrol}
+                onChange={() => handleCheckboxChange("superCarryPetrol")}
+              />
+              Super Carry Petrol
+            </div>
+           <div>
+              <input
+                type="checkbox"
+                checked={added.superCarryCNG}
+                onChange={() => handleCheckboxChange("superCarryCNG")}
+              />
+              Super Carry CNG
+            </div>  <div>
+              <input
+                type="checkbox"
+                checked={added.superCarryChasis}
+                onChange={() => handleCheckboxChange("superCarryChasis")}
+              />
+              Super Carry Petrol Chassis
+            </div>
+           
+            <div>
+              <input
+                type="checkbox"
+                checked={added.superCarryCNGChasis}
+                onChange={() => handleCheckboxChange("superCarryCNGChasis")}
+              />
+              Super Carry CNG Chassis
+            </div>
           </div>
         </div>
-        <table className="w-full mt-4 table-auto">
+
+        <table className="w-full table-auto">
           <thead className="bg-gray-500">
             <tr className="text-xs font-medium text-left text-gray-700">
               <th className="px-4 py-2">Measurement</th>
