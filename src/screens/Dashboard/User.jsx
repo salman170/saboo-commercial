@@ -22,29 +22,33 @@ const User = () => {
       console.log("error", error);
     }
   };
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:3000/users", {
-      userName,
-      password,
-      commission,
-    });
-    if (res.data.status === true) {
-      fetchData();
-      setUserName("");
-      setPassword("");
-      setCommission("");
+    try {
+      const res = await axios.post("http://localhost:8000/users", {
+        userName,
+        password,
+        commission,
+      });
+      alert("User added successfully");
+      
+      if (res.data.status === true) {
+        fetchData();
+        setUserName("");
+        setPassword("");
+        setCommission("");
+      }
+    } catch (error) {
+      console.log("error", error);
     }
   };
 
-  
   const toggleUserStatus = async (userId, newStatus) => {
     alert("updated", userId);
     try {
       // Update status in the backend
-      await axios.post("/updateStatus", { userId, status: newStatus });
+      await axios.put("/updateStatus", { userId, status: newStatus });
 
       // Update status in the frontend
       setData((prevUsers) =>
@@ -56,18 +60,6 @@ const User = () => {
       console.error("Failed to update status:", error);
     }
   };
-
-  const dummyData = [
-    {
-      _id: 1,
-      userName: "john@gmail.com",
-      password: "123456",
-      commission: "0.00",
-      percentage: "5",
-      status: true,
-      wallet: 0,
-    },
-  ];
 
   return (
     <div className="container mx-auto mt-8 ">
@@ -131,8 +123,8 @@ const User = () => {
             </tr>
           </thead>
           <tbody>
-            {dummyData.length > 0 ? (
-              dummyData.map((user, index) => (
+            {data.length > 0 ? (
+              data.map((user, index) => (
                 <tr key={user._id} className="text-center">
                   <td className="px-4 py-2 border">{index + 1}</td>
                   <td className="px-4 py-2 border">{user.userName}</td>

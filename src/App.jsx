@@ -10,6 +10,7 @@ import TourH1 from "./screens/vehicles/tour h1/TourH1";
 import TourH3 from "./screens/vehicles/tour h3/TourH3";
 import TourS from "./screens/vehicles/tour s/TourS";
 import TourV from "./screens/vehicles/tour v/TourV";
+import User from "./screens/Dashboard/User";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Routes>
         {/* Define your routes here */}
         <Route path="/" element={<Home />} />
+        <Route path="/user" element={<User />} />
         <Route path="/about" element={<About />} />
         <Route path="/super-carry" element={<SuperCarry />} />
         <Route path="/eeco-cargo" element={<EccoCargo />} />
