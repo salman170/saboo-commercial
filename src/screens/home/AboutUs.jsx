@@ -216,7 +216,7 @@ const AboutUs = ({ setOpen }) => {
               data-aos="zoom-in"
               data-aos-delay="200"
               data-aos-duration="1000"
-              className="pt-4 text-xl font-semibold lg:text-2xl"
+              className="pt-2 text-xl font-semibold lg:text-2xl"
             >
               LAC +
             </p>
@@ -227,7 +227,8 @@ const AboutUs = ({ setOpen }) => {
               className="text-xs"
             >
               COMMERCIAL <br />
-              VEHICLES SOLD
+              VEHICLES SOLD <br />
+              BY MARUTI SUZUKI 
             </p>
           </div>
         </div>

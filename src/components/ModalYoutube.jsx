@@ -21,6 +21,7 @@ const ModalYoutube = ({ open, setOpenYoutube, data }) => {
             height="315"
             src={data.url}
             title={data.title}
+            loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             className="w-full h-96 rounded-xl"
             allowFullScreen

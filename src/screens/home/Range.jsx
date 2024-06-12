@@ -32,7 +32,7 @@ const Range = () => {
       <div className="flex justify-center gap-2 pb-6 text-center lg:pb-10">
         <div
           onClick={() => setSelected(1)}
-          className={`border  px-2 py-2 rounded cursor-pointer relative text-sm md:text-base ${
+          className={`border-2  px-2 py-2 rounded-full cursor-pointer relative text-sm md:text-base md:w-48 ${
             selected === 1 && "border-primary text-primary"
           }`}
         >
@@ -45,7 +45,7 @@ const Range = () => {
         </div>
         <div
           onClick={() => setSelected(2)}
-          className={`border  px-2 py-2 rounded cursor-pointer relative text-sm md:text-base ${
+          className={`border-2  px-2 py-2 rounded-full cursor-pointer relative text-sm md:text-base md:w-48 ${
             selected === 2 && "border-primary text-primary"
           }`}
         >
@@ -67,13 +67,35 @@ const Range = () => {
           </div>
           <div>
             <div className="text-gray-600">Starting From</div>
-            {activeSlide ? (
+            {selected === 1 ? (
+              activeSlide === 0 ? (
+                <div className="font-bold">
+                  ₹ <CountUp start={100000} end={540500} duration={2} />
+                </div>
+              ) : (
+                <div className="font-bold">
+                  ₹ <CountUp start={100000} end={547000} duration={2} />
+                </div>
+              )
+            ) : activeSlide === 0 ? (
               <div className="font-bold">
-                ₹ <CountUp start={100000} end={540500} duration={2} />
+                ₹ <CountUp start={100000} end={480500} duration={2} />
+              </div>
+            ) : activeSlide === 1 ? (
+              <div className="font-bold">
+                ₹ <CountUp start={100000} end={551500} duration={2} />
+              </div>
+            ) : activeSlide === 2 ? (
+              <div className="font-bold">
+                ₹ <CountUp start={100000} end={656000} duration={2} />
+              </div>
+            ) : activeSlide === 3 ? (
+              <div className="font-bold">
+                ₹ <CountUp start={100000} end={980000} duration={2} />
               </div>
             ) : (
               <div className="font-bold">
-                ₹ <CountUp start={100000} end={547000} duration={2} />
+                ₹ <CountUp start={100000} end={529000} duration={2} />
               </div>
             )}
           </div>
@@ -83,8 +105,38 @@ const Range = () => {
             <img src={require("../../assets/home/engineicon.webp")} alt="" />
           </div>
           <div>
-            <div className="text-gray-600">Engine</div>
-            <div className="font-bold">1197 cc</div>
+            <div className="text-gray-600">Engine </div>
+            {selected === 1 ? (
+              activeSlide === 0 ? (
+                <div className="font-bold">
+                  ₹ <CountUp start={1000} end={1197} duration={2} /> cc
+                </div>
+              ) : (
+                <div className="font-bold">
+                  ₹ <CountUp start={1000} end={1197} duration={2} /> cc
+                </div>
+              )
+            ) : activeSlide === 0 ? (
+              <div className="font-bold">
+                ₹ <CountUp start={500} end={998} duration={2} /> cc
+              </div>
+            ) : activeSlide === 1 ? (
+              <div className="font-bold">
+                ₹ <CountUp start={500} end={998} duration={2} /> cc
+              </div>
+            ) : activeSlide === 2 ? (
+              <div className="font-bold">
+                ₹ <CountUp start={1000} end={1197} duration={2} /> cc
+              </div>
+            ) : activeSlide === 3 ? (
+              <div className="font-bold">
+                ₹ <CountUp start={1000} end={1462} duration={2} /> cc
+              </div>
+            ) : (
+              <div className="font-bold">
+                ₹ <CountUp start={1000} end={1197} duration={2} /> cc
+              </div>
+            )}
           </div>
         </div>
         <div className="flex items-center gap-4 md:px-6 lg:px-10">
@@ -160,7 +212,43 @@ const Range = () => {
                 <SwiperSlide>
                   <div className="flex items-center justify-center ">
                     <img
-                      src={require("../../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
+                      src={require("../../assets/vehicles/Tour_H1/TourH1-NewImg.webp")}
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="flex items-center justify-center ">
+                    <img
+                      src={require("../../assets/vehicles/Tour_H3/Tour H3.webp")}
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="flex items-center justify-center ">
+                    <img
+                      src={require("../../assets/vehicles/Tour_S/Tour S.webp")}
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="flex items-center justify-center ">
+                    <img
+                      src={require("../../assets/vehicles/Tour_M/Tour M.webp")}
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="flex items-center justify-center ">
+                    <img
+                      src={require("../../assets/vehicles/Tour_V/Tour V.webp")}
                       alt=""
                       srcset=""
                     />
@@ -196,20 +284,47 @@ const Range = () => {
             />
           </div>
         )}
-        <div className="flex items-center justify-center h-6 mt-10 md:mt-4">
-          {activeSlide ? (
+        <div className={`flex items-center justify-center h-6 mt-10  ${selected===2 ? "md:mt-16" :" md:mt-8"}`}>
+          {selected === 1 ? (
+            activeSlide ? (
+              <img
+                src={require("../../assets/vehicles/ecco_cargo/eecoCargoBrandName.png")}
+                alt=""
+                srcset=""
+                className="h-4 w-min"
+              />
+            ) : (
+              <img
+                src={require("../../assets/vehicles/super_carry/others/new super carry logo.webp")}
+                alt=""
+                srcset=""
+                className="h-6 w-min"
+              />
+            )
+          ) : activeSlide === 0 ? (
             <img
-              src={require("../../assets/vehicles/ecco_cargo/eecoCargoBrandName.png")}
+              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_h1-logo-2-new.png?mw=1200"
               alt=""
-              srcset=""
-              className="h-4 w-min"
+            />
+          ) : activeSlide === 1 ? (
+            <img
+              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_h3-logo-2-new.png?mw=1200"
+              alt=""
+            />
+          ) : activeSlide === 2 ? (
+            <img
+              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour-s-logo-new.png?mw=1200"
+              alt=""
+            />
+          ) : activeSlide === 3 ? (
+            <img
+              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour-m-logo-new.png?mw=1200"
+              alt=""
             />
           ) : (
             <img
-              src={require("../../assets/vehicles/super_carry/others/new super carry logo.webp")}
+              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_v-logo-2-new.png?mw=1200"
               alt=""
-              srcset=""
-              className="h-6 w-min"
             />
           )}
         </div>
@@ -236,8 +351,7 @@ const Range = () => {
               className="h-24 cursor-pointer "
             />
           </div>
-        )
-        }
+        )}
       </div>
     </div>
   );
