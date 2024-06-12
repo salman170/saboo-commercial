@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <div
-      className="sticky top-0 left-0 z-40 w-full px-2 bg-white lg:px-4"
+      className="sticky top-0 left-0 z-40 w-full px-2 bg-white shadow lg:px-4"
       // style={{
       //   transform: visible ? "translateY(0)" : "translateY(-100%)",
       //   transition: "transform 0.3s ease",
@@ -59,10 +59,10 @@ const Header = () => {
             <div className=" h-[3px] bg-primary group-hover:w-full w-0 duration-500"></div>
           </Link>
           <Link
-            to="/about"
+            to="/about-us"
             className="flex flex-col justify-between hover:text-primary group"
           >
-            <p className="py-6 lg:py-7"> About</p>
+            <p className="py-6 lg:py-7"> About us</p>
             <div className=" h-[3px] bg-primary group-hover:w-full w-0 duration-500"></div>
           </Link>
           <Link
@@ -70,6 +70,20 @@ const Header = () => {
             className="flex flex-col justify-between hover:text-primary group"
           >
             <p className="py-6 lg:py-7">Service</p>
+            <div className=" h-[3px] bg-primary group-hover:w-full w-0 duration-500"></div>
+          </Link>
+          <Link
+            to="/services"
+            className="flex flex-col justify-between hover:text-primary group"
+          >
+            <p className="py-6 lg:py-7">Finance</p>
+            <div className=" h-[3px] bg-primary group-hover:w-full w-0 duration-500"></div>
+          </Link>
+          <Link
+            to="/services"
+            className="flex flex-col justify-between hover:text-primary group"
+          >
+            <p className="py-6 lg:py-7">Insurance</p>
             <div className=" h-[3px] bg-primary group-hover:w-full w-0 duration-500"></div>
           </Link>
           <Link

@@ -11,10 +11,12 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { Autoplay, Navigation } from "swiper/modules";
 import CountUp from "react-countup";
 import { Link } from "react-router-dom";
+import React360 from "./React360";
 
 const Range = () => {
   const [selected, setSelected] = useState(1);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [threesixty, setThreesixty] = useState(0);
 
   return (
     <div
@@ -95,80 +97,123 @@ const Range = () => {
           </div>
         </div>
       </div>
-      <div className="z-10 py-16 ">
-        <Swiper
-          //   loop={true}
-          centeredSlides={true}
-          // navigation={true}
-          // autoplay={{
-          //   delay: 2000,
-          //   disableOnInteraction: false,
-          // }}
-          modules={[Autoplay, Navigation]}
-          breakpoints={{
-            // when window width is >= 640px
-            // 640: {
-            //   slidesPerView: 1,
-            //   spaceBetween: 20,
-            // },
-            // when window width is >= 768px
-            768: {
-              slidesPerView: 1.9,
-              spaceBetween: 10,
-            },
-            // when window width is >= 1024px
-            1024: {
-              slidesPerView: 1.9,
-              spaceBetween: 10,
-            },
-          }}
-          className="w-full carSlider"
-          onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
-        >
-          <SwiperSlide>
-            <div className="flex items-center justify-center opacity-0 slider_img ">
-              <img
-                src={require("../../assets/vehicles/super_carry/others/Super Carry.webp")}
-                alt=""
-                className=""
-              />
+      <div className="z-10 py-16 min-h-[50vh] lg:min-h-[55vh]">
+        {threesixty ? (
+          <div className="flex justify-center ">
+            <div className="w-80  md:w-[40rem] -mb-10  ">
+              <React360 activeSlide={activeSlide} />
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex items-center justify-center opacity-0 slider_img ">
-              <img
-                src={require("../../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
-                alt=""
-                className=""
-              />
-            </div>
-          </SwiperSlide>
-        </Swiper>
-
+          </div>
+        ) : (
+          <Swiper
+            //   loop={true}
+            centeredSlides={true}
+            // navigation={true}
+            // autoplay={{
+            //   delay: 2000,
+            //   disableOnInteraction: false,
+            // }}
+            modules={[Autoplay, Navigation]}
+            breakpoints={{
+              // when window width is >= 640px
+              // 640: {
+              //   slidesPerView: 1,
+              //   spaceBetween: 20,
+              // },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 1.9,
+                spaceBetween: 10,
+              },
+              // when window width is >= 1024px
+              1024: {
+                slidesPerView: 1.9,
+                spaceBetween: 10,
+              },
+            }}
+            className="w-full carSlider"
+            onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
+          >
+            {selected === 1 ? (
+              <>
+                <SwiperSlide>
+                  <div className="flex items-center justify-center ">
+                    <img
+                      src={require("../../assets/vehicles/super_carry/others/Super Carry.webp")}
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="flex items-center justify-center ">
+                    <img
+                      src={require("../../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </SwiperSlide>
+              </>
+            ) : (
+              <>
+                <SwiperSlide>
+                  <div className="flex items-center justify-center ">
+                    <img
+                      src={require("../../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </SwiperSlide>
+              </>
+            )}
+          </Swiper>
+        )}
         <div className="flex items-center justify-center w-full h-full -mt-24 -z-10">
           <img
             src={require("../../assets/home/dotted-circle.png")}
             alt=""
+            srcset=""
             className="md:h-28 w-min"
           />
         </div>
-
-        <div className="flex items-center justify-center h-6 mt-10 ">
+        {selected === 1 && (
+          <div className="flex items-center justify-center w-full h-full -mt-12 opacity-0 md:opacity-100 -z-10 md:z-20">
+            <img
+              onClick={() => {
+                setThreesixty(!threesixty);
+                if (activeSlide === 1 && threesixty) setActiveSlide(0);
+              }}
+              src={
+                !threesixty
+                  ? require("../../assets/home/Icon360.svg").default
+                  : "https://www.marutisuzukicommercial.com/images/icons/Icon360Close.svg"
+              }
+              alt=""
+              srcset=""
+              className="z-20 h-24 cursor-pointer"
+            />
+          </div>
+        )}
+        <div className="flex items-center justify-center h-6 mt-10 md:mt-4">
           {activeSlide ? (
             <img
               src={require("../../assets/vehicles/ecco_cargo/eecoCargoBrandName.png")}
               alt=""
+              srcset=""
               className="h-4 w-min"
             />
           ) : (
             <img
               src={require("../../assets/vehicles/super_carry/others/new super carry logo.webp")}
               alt=""
+              srcset=""
               className="h-6 w-min"
             />
           )}
         </div>
-        <div className="flex items-center justify-center h-6 mt-10 ">
+        <div className="flex flex-col items-center justify-center h-6 mt-10">
           <Link to={activeSlide ? "/eeco-cargo" : "/super-carry"}>
             <button
               aria-label={activeSlide ? "/eeco-cargo" : "/super-carry"}
@@ -178,6 +223,21 @@ const Range = () => {
             </button>
           </Link>
         </div>
+        {selected === 1 && (
+          <div className="flex items-center justify-center w-full h-full mt-4 md:hidden">
+            <img
+              onClick={() => {
+                setThreesixty(!threesixty);
+                if (activeSlide === 1 && threesixty) setActiveSlide(0);
+              }}
+              src={require("../../assets/home/Icon360.svg").default}
+              alt=""
+              srcset=""
+              className="h-24 cursor-pointer "
+            />
+          </div>
+        )
+        }
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroSection from "./HeroSection";
 import Range from "./Range";
 import { useGSAP } from "@gsap/react";
@@ -9,11 +9,18 @@ import HomeNews from "./HomeNews";
 import SocialMedia from "./SocialMedia";
 import Enquiry from "./Enquiry";
 import ScrollingSection from "./ScrollingSection";
+import ModalYoutube from "../../components/ModalYoutube";
 
 // Ensure ScrollTrigger is registered with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+  const [openYoutube, setOpenYoutube] = useState({
+    open: false,
+    title: "",
+    url: "",
+    description: "",
+  });
 
   useGSAP(() => {
     // New animation for.slider_img that triggers on scroll
@@ -37,9 +44,6 @@ const Home = () => {
         },
       }
     );
-
- 
-
 
     // gsap.to(".scorllingCar", {
     //   duration: 4,
@@ -74,14 +78,19 @@ const Home = () => {
   });
 
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <HeroSection />
       <Enquiry />
       <Range />
-      <AboutUs />
+      <AboutUs setOpen={setOpenYoutube} />
       <HomeNews />
       <SocialMedia />
       <ScrollingSection />
+      <ModalYoutube
+        open={openYoutube.open}
+        data={openYoutube}
+        setOpenYoutube={setOpenYoutube}
+      />
     </div>
   );
 };

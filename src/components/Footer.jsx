@@ -130,7 +130,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="px-2 py-3 border-t border-gray-500 lg:py-6 lg:px-4 md:border-t-0">
+        <div className="grid grid-cols-2 px-2 py-3 border-t border-gray-500 lg:py-6 lg:px-4 md:border-t-0">
           <ul className="text-lg font-semibold ">
             <li className="py-0.5">
               <Link to="/about">About Us</Link>
@@ -139,8 +139,16 @@ const Footer = () => {
               <Link to="/services">Services</Link>
             </li>
             <li className="py-0.5">
+              <Link to="/privacy-policy">Finance</Link>
+            </li>
+            <li className="py-0.5">
+              <Link to="/terms-and-conditions">Insurance</Link>
+            </li>{" "}
+            <li className="py-0.5">
               <Link to="/contact-us">Contact Us</Link>
             </li>
+          </ul>
+          <ul className="text-lg font-semibold ">
             <li className="py-0.5">
               <Link to="/privacy-policy">Privacy Policy</Link>
             </li>
@@ -181,11 +189,10 @@ const Footer = () => {
       </div>
       {/* <hr /> */}
       <div className="flex flex-col justify-between px-4 py-3 border-t border-gray-500 lg:py-6 sm:flex-row">
-      
-          <p className="text-xs sm:text-center">
-            © 2024 Saboo Commercial All Rights Reserved.
-          </p>
-        
+        <p className="text-xs sm:text-center">
+          © 2024 Saboo Commercial All Rights Reserved.
+        </p>
+
         <div className="flex items-center gap-2 text-xs lg:gap-4">
           Powered by
           <a
