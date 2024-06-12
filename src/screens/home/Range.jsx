@@ -158,13 +158,13 @@ const Range = () => {
           </div>
         ) : (
           <Swiper
-            //   loop={true}
+              // loop={true}
             centeredSlides={true}
-            // navigation={true}
-            // autoplay={{
-            //   delay: 2000,
-            //   disableOnInteraction: false,
-            // }}
+            navigation={true}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
             modules={[Autoplay, Navigation]}
             breakpoints={{
               // when window width is >= 640px
@@ -184,6 +184,7 @@ const Range = () => {
               },
             }}
             className="w-full carSlider"
+            
             onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
           >
             {selected === 1 ? (

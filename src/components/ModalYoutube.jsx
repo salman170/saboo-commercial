@@ -15,18 +15,20 @@ const ModalYoutube = ({ open, setOpenYoutube, data }) => {
     >
       <div className="border   bg-[#f5f5f2] p-6 lg:py-10 text-center w-full max-w-lg rounded-2xl relative ">
         {data && (
-            <div className="">
-          <iframe
-            width="560"
-            height="315"
-            src={data.url}
-            title={data.title}
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            className="w-full h-96 rounded-xl"
-            allowFullScreen
-          ></iframe>
-            <h1 className="pb-2 mt-4 text-xl font-semibold text-primary">{data.title}</h1>
+          <div className="">
+            <iframe
+              width="560"
+              height="315"
+              src={data.url}
+              title={data.title}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className="w-full h-96 rounded-xl"
+              allowFullScreen
+            ></iframe>
+            <h1 className="pb-2 mt-4 text-xl font-semibold text-primary">
+              {data.title}
+            </h1>
             <p className="text-sm text-gray-600">{data.description}</p>
           </div>
         )}
