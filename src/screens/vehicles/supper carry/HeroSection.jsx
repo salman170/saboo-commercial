@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import banner1 from "../../../assets/vehicles/super_carry/home/supercarrydisclaimerjato.webp";
-import banner2 from "../../../assets/vehicles/super_carry/home/supercarrymobiledisclaimerNew.webp";
+// import banner1 from "../../../assets/vehicles/super_carry/home/supercarrydisclaimerjato.webp";
+// import banner2 from "../../../assets/vehicles/super_carry/home/supercarrymobiledisclaimerNew.webp";
 import {
   HiOutlineClipboardDocumentList,
   HiOutlineDocumentArrowDown,
@@ -134,14 +134,14 @@ const HeroSection = () => {
           data-aos-delay="0"
           data-aos-duration="1000"
           className={`absolute top-0 left-0  h-full w-full bg-cover  bg-center hidden md:block `}
-          style={{ backgroundImage: `url(${banner1})` }}
+          // style={{ backgroundImage: `url(${banner1})` }}
         ></div>
         <div
           data-aos="fade-down-right"
           data-aos-delay="0"
           data-aos-duration="1000"
           className={`absolute top-0 left-0  h-full w-full bg-cover  bg-top md:hidden `}
-          style={{ backgroundImage: `url(${banner2})` }}
+          // style={{ backgroundImage: `url(${banner2})` }}
         ></div>
 
         <div className="absolute flex justify-center w-full gap-4 -translate-x-1/2 bottom-10 left-1/2 ">

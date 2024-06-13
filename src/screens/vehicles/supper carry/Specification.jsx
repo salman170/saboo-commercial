@@ -473,7 +473,7 @@ const Specification = () => {
 export default Specification;
 
 const TableSection = ({ section, selected, setSelected, index }) => (
-  <table className="w-full table-auto">
+  <table className="w-full mb-1 table-auto">
     <thead className="h-12 border">
       <tr
         onClick={() => setSelected(index)}
@@ -492,7 +492,7 @@ const TableSection = ({ section, selected, setSelected, index }) => (
       </tr>
     </thead>
     {selected === index && (
-      <tbody className="text-xs font-light text-left text-gray-800">
+      <tbody className="text-xs font-light text-left text-gray-800 ">
         {section.rows.map((row) => (
           <tr
             key={row.id}
