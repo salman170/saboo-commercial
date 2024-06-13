@@ -99,6 +99,8 @@ function React360({activeSlide}) {
         // autoRotate={{ disabled: true }}
         className="cursor-grab"
         onClick={() => setRotationDisabled(true)}
+        
+        // onMouseEnter={() => setRotationDisabled(true)}
         autoRotate={{ disabled: rotationDisabled, interval: 50 }}
       />
     </div>

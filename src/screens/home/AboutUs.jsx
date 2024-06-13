@@ -151,7 +151,9 @@ const AboutUs = ({ setOpen }) => {
 
         <div className="relative grid w-full h-full px-5 py-10 border-t border-gray-200 rounded-lg shadow-xl md:px-10 shadow-gray-200 sm:grid-cols-2 lg:gap-y-10 gap-y-5 lg:p-16">
           <div className="flex gap-2">
-            <div></div>
+            <div className="flex items-center justify-center text-gray-400 bg-gray-100 rounded-lg h-14 w-14">
+              ICON
+            </div>
             <div className="">
               <p
                 data-aos="zoom-in"
@@ -165,7 +167,9 @@ const AboutUs = ({ setOpen }) => {
             </div>
           </div>
           <div className="flex gap-2">
-            <div></div>
+            <div className="flex items-center justify-center text-gray-400 bg-gray-100 rounded-lg h-14 w-14">
+              ICON
+            </div>
             <div className="">
               <p
                 data-aos="zoom-in"
@@ -179,7 +183,9 @@ const AboutUs = ({ setOpen }) => {
             </div>
           </div>
           <div className="flex gap-2">
-            <div></div>
+            <div className="flex items-center justify-center text-gray-400 bg-gray-100 rounded-lg h-14 w-14">
+              ICON
+            </div>
             <div className="">
               <p
                 data-aos="zoom-in"
@@ -198,7 +204,7 @@ const AboutUs = ({ setOpen }) => {
               data-aos-delay="400"
               data-aos-duration="1000"
               aria-label="Explore more"
-              className="px-4 py-2 text-sm text-white border rounded shadow-lg bg-primary hover:text-primary hover:bg-transparent border-primary"
+              className="px-4 py-2 text-sm text-white border rounded-full shadow-lg bg-primary hover:text-primary hover:bg-transparent border-primary"
             >
               <Link to="/about-us">Explore More</Link>
             </button>
@@ -228,7 +234,7 @@ const AboutUs = ({ setOpen }) => {
             >
               COMMERCIAL <br />
               VEHICLES SOLD <br />
-              BY MARUTI SUZUKI 
+              BY MARUTI SUZUKI
             </p>
           </div>
         </div>
@@ -271,6 +277,7 @@ const AboutUs = ({ setOpen }) => {
                 },
               }}
               // loop={true}
+              navigation={true}
               autoplay={{
                 delay: 6000,
                 disableOnInteraction: false,

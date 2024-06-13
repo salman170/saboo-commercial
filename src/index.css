@@ -30,10 +30,11 @@ body {
 }
 
 .carSlider .swiper-slide img {
-  transform: scale(0.7);
-  -webkit-transform: scale(0.7);
-  -moz-transform: scale(0.7);
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
   transition-duration: 0.5s;
+  padding-top: 10px;
 }
 
 .carSlider .swiper-slide-active img {
@@ -44,8 +45,6 @@ body {
 .carSlider .swiper-wrapper {
   transition-duration: 0.8s ease !important;
 }
-
-
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
@@ -65,7 +64,12 @@ body {
 }
 
 :root {
-  --primary: rgba(255, 255, 255, 0.8); /* Adjust alpha channel to control transparency */
+  --primary: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Adjust alpha channel to control transparency */
   --secondary: rgb(218, 37, 29);
 }
 

@@ -121,7 +121,7 @@ const Enquiry = () => {
         className="absolute bottom-0 left-0 w-full rotate-180 h-1/2 -z-10"
       ></div> */}
       <div
-        className={`absolute  top-0 left-0 w-full h-full -z-10 bg-gradient-to-r from-[#ECF3FE] to-[#FBFDFF]`}
+        className={`absolute  top-0 left-0 w-full h-full -z-10 bg-gradient-to-t from-[#ECF3FE] to-[#FBFDFF]`}
       ></div>
     </div>
   );

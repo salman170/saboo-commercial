@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { useGSAP } from "@gsap/react";
 // import gsap from "gsap";
@@ -17,6 +17,7 @@ const Range = () => {
   const [selected, setSelected] = useState(1);
   const [activeSlide, setActiveSlide] = useState(0);
   const [threesixty, setThreesixty] = useState(0);
+  const swiperRef = useRef(null);
 
   return (
     <div
@@ -29,10 +30,14 @@ const Range = () => {
       <div className="py-6 text-xl font-medium text-center lg:py-10 md:text-2xl lg:text-3xl">
         VEHICLE RANGE
       </div>
-      <div className="flex justify-center gap-2 pb-6 text-center lg:pb-10">
+      <div className="flex justify-center gap-2 pb-6 text-center select-none lg:pb-10">
         <div
-          onClick={() => setSelected(1)}
-          className={`border-2  px-2 py-2 rounded-full cursor-pointer relative text-sm md:text-base md:w-48 ${
+          onClick={() => {
+            setSelected(1);
+            swiperRef.current.slideTo(0);
+            setThreesixty(0);
+          }}
+          className={`border-2  px-2 py-2 rounded-full cursor-pointer relative text-sm md:text-base md:w-48 text-gray-500 ${
             selected === 1 && "border-primary text-primary"
           }`}
         >
@@ -44,8 +49,12 @@ const Range = () => {
           />
         </div>
         <div
-          onClick={() => setSelected(2)}
-          className={`border-2  px-2 py-2 rounded-full cursor-pointer relative text-sm md:text-base md:w-48 ${
+          onClick={() => {
+            setSelected(2);
+            swiperRef.current.slideTo(0);
+            setThreesixty(0);
+          }}
+          className={`border-2  px-2 py-2 rounded-full cursor-pointer relative text-sm md:text-base md:w-48 text-gray-500 ${
             selected === 2 && "border-primary text-primary"
           }`}
         >
@@ -158,7 +167,10 @@ const Range = () => {
           </div>
         ) : (
           <Swiper
-              // loop={true}
+            // loop={true}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
             centeredSlides={true}
             navigation={true}
             autoplay={{
@@ -184,7 +196,6 @@ const Range = () => {
               },
             }}
             className="w-full carSlider"
-            
             onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
           >
             {selected === 1 ? (
@@ -285,7 +296,11 @@ const Range = () => {
             />
           </div>
         )}
-        <div className={`flex items-center justify-center h-6 mt-10  ${selected===2 ? "md:mt-16" :" md:mt-8"}`}>
+        <div
+          className={`flex items-center justify-center h-6 mt-10  ${
+            selected === 2 ? "md:mt-16" : " md:mt-8"
+          }`}
+        >
           {selected === 1 ? (
             activeSlide ? (
               <img

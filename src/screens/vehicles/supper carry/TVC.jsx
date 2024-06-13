@@ -11,7 +11,7 @@ const TVC = () => {
           <h4 className="mt-4 mb-10 text-3xl italic font-semibold tracking-tight uppercase md:text-4xl lg:text-5xl">
             Watch Super Carry in Action
           </h4>
-          <div className="h-[50vh] shadow-xl bg-white p-2 lg:h-[55vh]">
+          <div className="h-[50vh]  bg-white p-2 lg:h-[55vh]">
             <div className="h-full">
               <iframe
                 className="w-full h-full "
@@ -19,8 +19,9 @@ const TVC = () => {
                 // src="https://www.youtube-nocookie.com/embed/63IME4Vu2DI?si=V8xNi8T7AalNkFRI&amp;rel=0"
                 title="Maruti Suzuki| Smart Hybrid Technology"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allow="accelerometer;"
+                // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                // allowfullscreen
               ></iframe>
             </div>
           </div>
