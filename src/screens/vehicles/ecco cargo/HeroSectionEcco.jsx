@@ -35,9 +35,7 @@ const HeroSectionEcco = () => {
             <img
               src={require("../../../assets/vehicles/ecco_cargo/home/Eeco banner first mobile.webp")}
               alt=""
-              className={`rounded-lg cursor-pointer ${
-                selectedBanner === 1 ? "grayscale-0" : "grayscale"
-              }`}
+              className={`rounded-lg cursor-pointer `}
               onClick={() => setSelectedBanner(1)}
             />
           </div>
@@ -50,9 +48,7 @@ const HeroSectionEcco = () => {
             <img
               src={require("../../../assets/vehicles/ecco_cargo/home/EECOBanner.webp")}
               alt=""
-              className={`rounded-lg cursor-pointer ${
-                selectedBanner === 2 ? "grayscale-0" : "grayscale"
-              }`}
+              className={`rounded-lg cursor-pointer `}
               onClick={() => setSelectedBanner(2)}
             />
           </div>

@@ -50,13 +50,15 @@ const Header = () => {
       // }}
     >
       <div className="relative">
-        <div className="flex items-center justify-between h-20 px-2 lg:px-4">
-          <div onMouseEnter={()=>setVisible(false)} className="">
+        <div
+          className={`flex items-center justify-between h-20 px-2 lg:px-4 border-b`}
+        >
+          <div onMouseEnter={() => setVisible(false)} className="">
             <Link to="/" className="w-min">
               <img
-                src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/logo.png?h=100&iar=0&w=100&hash=DB3AD9CB421109099D0DD5E01E9A8398&mw=3840"
+                src={require("../assets/home/RKS Commercial Logo.png")}
                 alt=""
-                className="h-4 lg:h-5"
+                className="object-contain w-28 lg:w-32 "
               />
             </Link>
           </div>
@@ -158,7 +160,7 @@ const Header = () => {
 
             <div className="flex gap-4 mt-4 mb-2 lg:gap-10">
               <Link to="/super-carry" onClick={() => setVisible(false)}>
-                <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-gradient-to-t from-white via-transparent ">
+                <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-primary/5">
                   <img
                     src={require("../assets/vehicles/super_carry/others/Super Carry.webp")}
                     alt=""
@@ -186,7 +188,7 @@ const Header = () => {
                 </div>
               </Link>
               <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
-                <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-gradient-to-t from-white via-transparent ">
+                <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-primary/5 ">
                   <img
                     src={require("../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
                     alt=""
@@ -214,7 +216,7 @@ const Header = () => {
                 </div>
               </Link>
             </div>
-            <div
+            {/* <div
               style={{
                 background: `linear-gradient(rgba(208, 226, 252, 0) 0%, rgb(208, 226, 252) 49.66%, rgb(208, 226, 252) 100%)`,
               }}
@@ -225,7 +227,7 @@ const Header = () => {
                 background: `linear-gradient(rgba(208, 226, 252, 0) 0%, rgb(208, 226, 252) 49.66%, rgb(208, 226, 252) 100%)`,
               }}
               className="absolute bottom-0 left-0 w-full rotate-180 h-1/2 -z-10"
-            ></div>
+            ></div> */}
           </div>
         )}
       </div>
