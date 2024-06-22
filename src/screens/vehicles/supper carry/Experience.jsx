@@ -65,7 +65,7 @@ const Experience = () => {
             </div>
           )}
         </div>
-        <div className="flex justify-center mt-6 duration-500 ">
+        <div className="justify-center hidden mt-6 duration-500  md:flex">
           <div
             onClick={() => setThreesixty(!threesixty)}
             className="relative w-20 transition-all duration-500 rounded-full cursor-pointer h-7 bg-gray-400/50 "
@@ -105,7 +105,7 @@ const Experience = () => {
           </button>
         </div>
       </div>
-      {/* <div className="bg-white md:max-w-[400px] shadow h-full absolute right-0 top-0 w-full lg:max-w-[500px] rounded-xl">
+      {/* <div className="bg-white md:max-w-[400px] shadow h-full absolute right-0 top-0 w-full lg:max-w-[500px] rounded-xl shadow-blue-100">
         fsdfds
       </div> */}
     </div>

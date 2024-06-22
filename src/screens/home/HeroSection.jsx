@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 import SocialMediaIcons from "../../components/SocialMediaIcons";
 
 // Import Swiper styles
@@ -16,6 +16,7 @@ const HeroSection = () => {
           dynamicBullets: true,
           clickable: true,
         }}
+        effect="fade"
         // loop={true}
         centeredSlides={true}
         // navigation={true}
@@ -24,7 +25,7 @@ const HeroSection = () => {
           delay: 10000,
           disableOnInteraction: false,
         }}
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination, Autoplay, EffectFade]}
         className="w-full overflow-visible select-none customerSwiper "
         // style={backgroundStyle}
       >

@@ -57,7 +57,7 @@ const Features = () => {
   // });
 
   return (
-    <div className="h-[200vh] relative">
+    <div className="relative ">
       <div className="sticky overflow-hidden top-20 outer_container">
         <div className="container px-1 py-10 mx-auto lg:pt-20 lg:pb-20 md:max-w-6xl">
           <h2 className="bg-[#616161] text-2xl font-semibold text-white py-2 w-min rounded-md px-4 -skew-x-12 uppercase">

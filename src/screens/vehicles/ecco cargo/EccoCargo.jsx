@@ -1,9 +1,12 @@
-import React from 'react'
+import HeroSectionEcco from "./HeroSectionEcco";
+
 
 const EccoCargo = () => {
   return (
-    <div>EccoCargo</div>
-  )
+    <div>
+      <HeroSectionEcco />
+    </div>
+  );
 }
 
 export default EccoCargo

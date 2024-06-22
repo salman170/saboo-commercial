@@ -43,7 +43,7 @@ const Range = () => {
         >
           Goods Carrier
           <IoMdArrowDropdown
-            className={`text-primary text-4xl absolute left-1/2 -translate-x-1/2 top-7  ${
+            className={`text-primary text-4xl absolute left-1/2 -translate-x-1/2 -mt-1 md:mt-0 top-7  ${
               selected === 1 ? "block" : "hidden"
             }`}
           />
@@ -60,105 +60,116 @@ const Range = () => {
         >
           Passenger Carrier
           <IoMdArrowDropdown
-            className={`text-primary text-4xl absolute left-1/2 -translate-x-1/2 top-7  ${
+            className={`text-primary text-4xl absolute left-1/2 -translate-x-1/2 -mt-1 md:mt-0 top-7  ${
               selected === 2 ? "block" : "hidden"
             }`}
           />
         </div>
       </div>
       <div className="flex flex-wrap justify-center gap-4">
-        <div className="flex items-center gap-4 md:px-6 lg:px-10">
+        <div className="flex items-center gap-2 md:gap-4 md:px-6 lg:px-10 md:w-60">
           <div>
             <img
               src={require("../../assets/home/startingpriceicon.webp")}
               alt=""
+              className="h-5 md:h-auto"
             />
           </div>
           <div>
-            <div className="text-gray-600">Starting From</div>
+            <div className="text-xs text-gray-600 md:text-base">
+              Starting From
+            </div>
             {selected === 1 ? (
               activeSlide === 0 ? (
-                <div className="font-bold">
+                <div className="text-xs font-bold md:text-base">
                   ₹ <CountUp start={100000} end={540500} duration={2} />
                 </div>
               ) : (
-                <div className="font-bold">
+                <div className="text-xs font-bold md:text-base">
                   ₹ <CountUp start={100000} end={547000} duration={2} />
                 </div>
               )
             ) : activeSlide === 0 ? (
-              <div className="font-bold">
+              <div className="text-xs font-bold md:text-base">
                 ₹ <CountUp start={100000} end={480500} duration={2} />
               </div>
             ) : activeSlide === 1 ? (
-              <div className="font-bold">
+              <div className="text-xs font-bold md:text-base">
                 ₹ <CountUp start={100000} end={551500} duration={2} />
               </div>
             ) : activeSlide === 2 ? (
-              <div className="font-bold">
+              <div className="text-xs font-bold md:text-base">
                 ₹ <CountUp start={100000} end={656000} duration={2} />
               </div>
             ) : activeSlide === 3 ? (
-              <div className="font-bold">
+              <div className="text-xs font-bold md:text-base">
                 ₹ <CountUp start={100000} end={980000} duration={2} />
               </div>
             ) : (
-              <div className="font-bold">
+              <div className="text-xs font-bold md:text-base">
                 ₹ <CountUp start={100000} end={529000} duration={2} />
               </div>
             )}
           </div>
         </div>
-        <div className="flex items-center gap-4 md:px-6 lg:px-10 border-x-2">
+        <div className="flex items-center gap-2 px-1 md:gap-4 md:px-6 lg:px-10 border-x-2 md:w-60">
           <div>
-            <img src={require("../../assets/home/engineicon.webp")} alt="" />
+            <img
+              src={require("../../assets/home/engineicon.webp")}
+              alt=""
+              className="h-5 md:h-auto"
+            />
           </div>
           <div>
-            <div className="text-gray-600">Engine </div>
+            <div className="text-xs text-gray-600 md:text-base">Engine </div>
             {selected === 1 ? (
               activeSlide === 0 ? (
-                <div className="font-bold">
+                <div className="text-xs font-bold md:text-base">
                   ₹ <CountUp start={1000} end={1197} duration={2} /> cc
                 </div>
               ) : (
-                <div className="font-bold">
+                <div className="text-xs font-bold md:text-base">
                   ₹ <CountUp start={1000} end={1197} duration={2} /> cc
                 </div>
               )
             ) : activeSlide === 0 ? (
-              <div className="font-bold">
+              <div className="text-xs font-bold md:text-base">
                 ₹ <CountUp start={500} end={998} duration={2} /> cc
               </div>
             ) : activeSlide === 1 ? (
-              <div className="font-bold">
+              <div className="text-xs font-bold md:text-base">
                 ₹ <CountUp start={500} end={998} duration={2} /> cc
               </div>
             ) : activeSlide === 2 ? (
-              <div className="font-bold">
+              <div className="text-xs font-bold md:text-base">
                 ₹ <CountUp start={1000} end={1197} duration={2} /> cc
               </div>
             ) : activeSlide === 3 ? (
-              <div className="font-bold">
+              <div className="text-xs font-bold md:text-base">
                 ₹ <CountUp start={1000} end={1462} duration={2} /> cc
               </div>
             ) : (
-              <div className="font-bold">
+              <div className="text-xs font-bold md:text-base">
                 ₹ <CountUp start={1000} end={1197} duration={2} /> cc
               </div>
             )}
           </div>
         </div>
-        <div className="flex items-center gap-4 md:px-6 lg:px-10">
+        <div className="flex items-center gap-2 md:px-6 lg:px-10 md:w-60 md:gap-4">
           <div>
-            <img src={require("../../assets/home/fuelicon.webp")} alt="" />
+            <img
+              src={require("../../assets/home/fuelicon.webp")}
+              alt=""
+              className="h-5 md:h-auto"
+            />
           </div>
           <div>
-            <div className="text-gray-600">Variant</div>
-            <div className="font-bold">PETROL/CNG</div>
+            <div className="text-xs text-gray-600 md:text-base">Variant</div>
+            <div className="text-xs font-bold md:text-base">PETROL/CNG</div>
           </div>
         </div>
       </div>
-      <div className="z-10 py-16 min-h-[50vh] lg:min-h-[55vh]">
+      <div className="z-10 py-16 min-h-[50vh] lg:min-h-[55vh] ">
         {threesixty ? (
           <div className="flex justify-center ">
             <div className="w-80  md:w-[40rem] -mb-10  ">
@@ -204,8 +215,8 @@ const Range = () => {
                   <div className="flex items-center justify-center ">
                     <img
                       src={require("../../assets/vehicles/super_carry/others/Super Carry.webp")}
-                      alt=""
-                      srcset=""
+                      alt = "" className="px-2 md:px-0"
+                      
                     />
                   </div>
                 </SwiperSlide>
@@ -213,8 +224,8 @@ const Range = () => {
                   <div className="flex items-center justify-center ">
                     <img
                       src={require("../../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
-                      alt=""
-                      srcset=""
+                      alt = "" className="px-2 md:px-0"
+                      
                     />
                   </div>
                 </SwiperSlide>
@@ -225,8 +236,8 @@ const Range = () => {
                   <div className="flex items-center justify-center ">
                     <img
                       src={require("../../assets/vehicles/Tour_H1/TourH1-NewImg.webp")}
-                      alt=""
-                      srcset=""
+                      alt = "" className="px-2 md:px-0"
+                      
                     />
                   </div>
                 </SwiperSlide>
@@ -234,8 +245,8 @@ const Range = () => {
                   <div className="flex items-center justify-center ">
                     <img
                       src={require("../../assets/vehicles/Tour_H3/Tour H3.webp")}
-                      alt=""
-                      srcset=""
+                      alt = "" className="px-2 md:px-0"
+                      
                     />
                   </div>
                 </SwiperSlide>
@@ -243,8 +254,8 @@ const Range = () => {
                   <div className="flex items-center justify-center ">
                     <img
                       src={require("../../assets/vehicles/Tour_S/Tour S.webp")}
-                      alt=""
-                      srcset=""
+                      alt = "" className="px-2 md:px-0"
+                      
                     />
                   </div>
                 </SwiperSlide>
@@ -252,8 +263,8 @@ const Range = () => {
                   <div className="flex items-center justify-center ">
                     <img
                       src={require("../../assets/vehicles/Tour_M/Tour M.webp")}
-                      alt=""
-                      srcset=""
+                      alt = "" className="px-2 md:px-0"
+                      
                     />
                   </div>
                 </SwiperSlide>
@@ -261,8 +272,8 @@ const Range = () => {
                   <div className="flex items-center justify-center ">
                     <img
                       src={require("../../assets/vehicles/Tour_V/Tour V.webp")}
-                      alt=""
-                      srcset=""
+                      alt = "" className="px-2 md:px-0"
+                      
                     />
                   </div>
                 </SwiperSlide>
@@ -270,11 +281,11 @@ const Range = () => {
             )}
           </Swiper>
         )}
-        <div className="flex items-center justify-center w-full h-full -mt-24 -z-10">
+        <div className="items-center justify-center hidden w-full h-full -mt-24 md:flex -z-10 ">
           <img
             src={require("../../assets/home/dotted-circle.png")}
             alt=""
-            srcset=""
+            
             className="md:h-28 w-min"
           />
         </div>
@@ -291,7 +302,7 @@ const Range = () => {
                   : "https://www.marutisuzukicommercial.com/images/icons/Icon360Close.svg"
               }
               alt=""
-              srcset=""
+              
               className="z-20 h-24 cursor-pointer"
             />
           </div>
@@ -306,14 +317,14 @@ const Range = () => {
               <img
                 src={require("../../assets/vehicles/ecco_cargo/eecoCargoBrandName.png")}
                 alt=""
-                srcset=""
+                
                 className="h-4 w-min"
               />
             ) : (
               <img
                 src={require("../../assets/vehicles/super_carry/others/new super carry logo.webp")}
                 alt=""
-                srcset=""
+                
                 className="h-6 w-min"
               />
             )
@@ -347,27 +358,13 @@ const Range = () => {
         <div className="flex flex-col items-center justify-center h-6 mt-10">
           <Link to={activeSlide ? "/eeco-cargo" : "/super-carry"}>
             <button
-              aria-label={activeSlide ? "/eeco-cargo" : "/super-carry"}
-              className="px-4 py-2 text-sm text-white border rounded bg-primary hover:text-primary hover:bg-transparent border-primary"
+              aria-label={activeSlide ? "eeco-cargo" : "super-carry"}
+              className="px-4 py-2 text-sm text-white border rounded-full lg:px-8 bg-primary hover:text-primary hover:bg-transparent border-primary"
             >
               Explore
             </button>
           </Link>
         </div>
-        {selected === 1 && (
-          <div className="flex items-center justify-center w-full h-full mt-4 md:hidden">
-            <img
-              onClick={() => {
-                setThreesixty(!threesixty);
-                if (activeSlide === 1 && threesixty) setActiveSlide(0);
-              }}
-              src={require("../../assets/home/Icon360.svg").default}
-              alt=""
-              srcset=""
-              className="h-24 cursor-pointer "
-            />
-          </div>
-        )}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ const VehicleEnquiry = () => {
   const [variant, setVariant] = useState("488000");
   return (
     <div className="relative">
-      <div className="container flex flex-col-reverse px-4 py-10 mx-auto mt-10 gap-y-8 lg:pb-20 md:flex-row">
+      <div className="container flex flex-col px-4 py-10 mx-auto mt-10 gap-y-8 lg:pb-20 md:flex-row">
         {/* <div className="text-center">
           <h2 className="text-4xl font-semibold text-gray-800">
             Vehicle Enquiry
