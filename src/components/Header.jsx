@@ -31,24 +31,16 @@ const Header = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-// useEffect(() => {
-//   if(visible){
-//     document.body.style.overflow = 'hidden';
-//   }
-//   else{
-//     document.body.style.overflow = 'auto';
-//   }
-// }
-// , [visible])
+  useEffect(() => {
+    if (visible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [visible]);
 
   return (
-    <div
-      className="sticky top-0 left-0 z-40 w-full bg-white shadow "
-      // style={{
-      //   transform: visible ? "translateY(0)" : "translateY(-100%)",
-      //   transition: "transform 0.3s ease",
-      // }}
-    >
+    <div className="sticky top-0 left-0 z-40 w-full bg-white shadow ">
       <div className="relative">
         <div
           className={`flex items-center justify-between h-20 px-2 lg:px-4 border-b`}
@@ -84,6 +76,14 @@ const Header = () => {
               />
             </div>
             <Link
+              to="/services"
+              onMouseEnter={() => setVisible(false)}
+              className="flex flex-col justify-between hover:text-primary group"
+            >
+              <p className="py-6 lg:py-7">Book a Service</p>
+              <div className=" h-[3px] bg-primary group-hover:w-full w-0 duration-500" />
+            </Link>
+            <Link
               to="/about-us"
               onMouseEnter={() => setVisible(false)}
               className="flex flex-col justify-between hover:text-primary group"
@@ -91,14 +91,7 @@ const Header = () => {
               <p className="py-6 lg:py-7"> About us</p>
               <div className=" h-[3px] bg-primary group-hover:w-full w-0 duration-500" />
             </Link>
-            <Link
-              to="/services"
-              onMouseEnter={() => setVisible(false)}
-              className="flex flex-col justify-between hover:text-primary group"
-            >
-              <p className="py-6 lg:py-7">Service</p>
-              <div className=" h-[3px] bg-primary group-hover:w-full w-0 duration-500" />
-            </Link>
+
             <Link
               to="/finance"
               onMouseEnter={() => setVisible(false)}

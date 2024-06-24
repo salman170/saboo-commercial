@@ -6,6 +6,7 @@ import TVC from './TVC'
 import Specification from './Specification'
 import FAQSupCar from './FAQSupCar'
 import HeroSectionSuper from './HeroSectionSuper'
+import Three from './Three'
 
 const SuperCarry = () => {
   const variant = [
@@ -35,6 +36,7 @@ const SuperCarry = () => {
       <HeroSectionSuper />
       <VehicleEnquiry data={variant} />
       <Experience />
+      <Three />
       <Features />
       <TVC />
       <Specification />

@@ -80,9 +80,8 @@ export const images2 = [
   require("../../assets/vehicles/ecco_cargo/images/download (35).png"),
 ];
 
-function React360({activeSlide}) {
+function React360({ activeSlide }) {
   const [rotationDisabled, setRotationDisabled] = useState(false);
-
 
   useEffect(() => {
     setTimeout(() => {
@@ -92,14 +91,24 @@ function React360({activeSlide}) {
     return clearTimeout();
   }, []);
 
+  // useEffect(() => {
+  //   const handleContextMenu = (e) => {
+  //     e.preventDefault();
+  //   };
+  //   document.addEventListener("contextmenu", handleContextMenu);
+
+  //   return () => {
+  //     document.removeEventListener("contextmenu", handleContextMenu);
+  //   };
+  // }, []);
+
   return (
     <div className="flex items-center justify-center ">
       <ReactImageTurntable
-        images={activeSlide?images2:images}
+        images={activeSlide ? images2 : images}
         // autoRotate={{ disabled: true }}
         className="cursor-grab"
         onClick={() => setRotationDisabled(true)}
-        
         // onMouseEnter={() => setRotationDisabled(true)}
         autoRotate={{ disabled: rotationDisabled, interval: 50 }}
       />

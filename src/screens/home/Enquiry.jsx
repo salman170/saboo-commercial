@@ -14,7 +14,7 @@ const validationSchema = Yup.object().shape({
   vehicle: Yup.string().required("Vehicle is required"),
 });
 
-const Enquiry = () => {
+const Enquiry = ({ title1, title2 }) => {
   useEffect(() => {
     Aos.init();
   }, []);
@@ -26,9 +26,9 @@ const Enquiry = () => {
             data-aos="zoom-in"
             data-aos-delay="0"
             data-aos-duration="500"
-            className="py-6 text-xl font-medium text-center lg:py-10 md:text-2xl lg:text-3xl"
+            className="py-6 text-xl font-medium text-center uppercase lg:py-10 md:text-2xl lg:text-3xl"
           >
-            ENQUIRE NOW 
+            {title1} <span className="text-primary">{title2}</span>
           </div>
           <div
             data-aos="zoom-in"
@@ -108,7 +108,7 @@ const Enquiry = () => {
           </Formik>
         </div>
       </div>
-      {/* <div
+      <div
         style={{
           background: `linear-gradient(rgba(208, 226, 252, 0) 0%, rgb(208, 226, 252) 49.66%, rgb(208, 226, 252) 100%)`,
         }}
@@ -119,10 +119,10 @@ const Enquiry = () => {
           background: `linear-gradient(rgba(208, 226, 252, 0) 0%, rgb(208, 226, 252) 49.66%, rgb(208, 226, 252) 100%)`,
         }}
         className="absolute bottom-0 left-0 w-full rotate-180 h-1/2 -z-10"
-      ></div> */}
-      <div
-        className={`absolute  top-0 left-0 w-full h-full -z-10 bg-gradient-to-t from-[#ECF3FE] to-[#FBFDFF]`}
       ></div>
+      {/* <div
+        className={`absolute  top-0 left-0 w-full h-full -z-10 bg-gradient-to-t from-[#ECF3FE] to-[#FBFDFF]`}
+      ></div> */}
     </div>
   );
 };
