@@ -157,13 +157,11 @@ const Header = () => {
                   <img
                     src={require("../assets/vehicles/super_carry/others/Super Carry.webp")}
                     alt=""
-                    srcset=""
                     className="h-40"
                   />
                   <img
                     src={require("../assets/vehicles/super_carry/others/new super carry logo.webp")}
                     alt=""
-                    srcset=""
                     className="mt-2 "
                   />
                   <p className="mt-1 text-xs">
@@ -185,13 +183,11 @@ const Header = () => {
                   <img
                     src={require("../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
                     alt=""
-                    srcset=""
                     className="h-40"
                   />
                   <img
                     src={require("../assets/vehicles/ecco_cargo/eecoCargoBrandName.png")}
                     alt=""
-                    srcset=""
                     className="mt-2 "
                   />
                   <p className="mt-1 text-xs">

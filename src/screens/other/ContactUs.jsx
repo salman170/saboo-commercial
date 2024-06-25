@@ -26,7 +26,7 @@ const ContactUs = () => {
       </div> */}
       <Enquiry title1="Saboo commercial " title2="Contact us" />
       <section>
-        <div className="container px-1 mx-auto my-12 overflow-hidden lg:mb-20 ">
+        <div className="container px-1 mx-auto my-12 overflow-hidden lg:mb-20 lg:max-w-5xl ">
           <iframe
             id="map"
             width="100%"

@@ -82,3 +82,7 @@ body {
 *::-webkit-scrollbar-thumb:hover {
   width: 8px;
 } */
+
+#three-canvas-container{
+  height: 100vh !important;
+}

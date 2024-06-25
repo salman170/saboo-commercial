@@ -14,7 +14,6 @@ const Experience = () => {
   return (
     <div className="bg-gradient-to-t from-[#D0E2FC] to-white relative">
       <div className="container px-1 py-10 mx-auto select-none lg:pt-20 lg:pb-16 md:max-w-6xl">
-      
         <h2 className="bg-[#616161] text-2xl font-semibold text-white py-2 w-min rounded-md px-4 -skew-x-12 uppercase mb-4">
           Experience
         </h2>
@@ -83,7 +82,6 @@ const Experience = () => {
                 <img
                   src={require("../../../assets/home/three_sixty_view.gif")}
                   alt=""
-                  srcset=""
                   className="scale-x-110"
                 />
               )}
