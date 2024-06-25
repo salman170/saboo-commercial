@@ -15,6 +15,7 @@ import ContactUs from "./screens/other/ContactUs";
 import Finance from "./screens/other/Finance";
 import Insurance from "./screens/other/Insurance";
 import Service from "./screens/other/Service";
+import ThreeJs from "./screens/home/ThreeJs";
 // import User from "./screens/Dashboard/User";
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/dzire-tour-s" element={<TourS />} />
         <Route path="/ertiga-tour-m" element={<TourM />} />
         <Route path="/eeco-tour-v" element={<TourV />} />
+        <Route path="/three" element={<ThreeJs />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
