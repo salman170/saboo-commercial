@@ -80,7 +80,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       <HeroSection />
-      <Enquiry />
+      <Enquiry title1="ENQUIRE NOW " />
       <Range />
       <AboutUs setOpen={setOpenYoutube} />
       <HomeNews />

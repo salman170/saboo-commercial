@@ -14,7 +14,7 @@ const validationSchema = Yup.object().shape({
   vehicle: Yup.string().required("Vehicle is required"),
 });
 
-const Enquiry = ({ title1, title2 }) => {
+const Enquiry = ({ title1, title2, desc }) => {
   useEffect(() => {
     Aos.init();
   }, []);
@@ -26,7 +26,7 @@ const Enquiry = ({ title1, title2 }) => {
             data-aos="zoom-in"
             data-aos-delay="0"
             data-aos-duration="500"
-            className="py-6 text-xl font-medium text-center uppercase lg:py-10 md:text-2xl lg:text-3xl"
+            className="pt-6 pb-2 text-xl font-medium text-center uppercase lg:pt-10 md:text-2xl lg:text-3xl"
           >
             {title1} <span className="text-primary">{title2}</span>
           </div>
@@ -36,8 +36,8 @@ const Enquiry = ({ title1, title2 }) => {
             data-aos-duration="1000"
             className="text-sm text-center lg:px-10 "
           >
-            Start your journey to bring home the perfect Commercial vehicle for
-            your business.
+            {desc?` ${desc}`:" Start your journey to bring home the perfect Commercial vehicle for your business." }
+           
           </div>
         </div>
         <div className="max-w-5xl pb-10 mx-auto">

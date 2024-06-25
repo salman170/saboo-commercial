@@ -31,13 +31,13 @@ const Header = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  useEffect(() => {
-    if (visible) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [visible]);
+  // useEffect(() => {
+  //   if (visible) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  // }, [visible]);
 
   return (
     <div className="sticky top-0 left-0 z-40 w-full bg-white shadow ">
@@ -127,11 +127,12 @@ const Header = () => {
           <div
             onMouseEnter={() => setVisible(true)}
             onMouseLeave={() => setVisible(false)}
-            className={`absolute top-20 left-0 w-full bg-white  hidden md:flex border-b  items-center  flex-col z-20 py-4 select-none lg:py-10`}
+            className={`absolute top-20 left-0 w-full bg-blue-50  hidden md:flex border-b  items-center  flex-col z-20 py-4 select-none lg:py-10`}
           >
             <div className="z-10 flex justify-between w-full max-w-md text-sm">
               <div
                 onClick={() => setSelected("Goods Carrier")}
+                // onMouseEnter={() => setSelected("Goods Carrier")}
                 className={`pb-4 cursor-pointer  ${
                   selected === "Goods Carrier" &&
                   "border-b-2 border-primary text-primary"
@@ -141,6 +142,7 @@ const Header = () => {
               </div>
               <div
                 onClick={() => setSelected("Passenger Carrier")}
+                // onMouseEnter={() => setSelected("Passenger Carrier")}
                 className={`pb-4 cursor-pointer  ${
                   selected === "Passenger Carrier" &&
                   "border-b-2 border-primary text-primary"
@@ -149,62 +151,204 @@ const Header = () => {
                 Passenger Carrier
               </div>
             </div>
-            <div className="w-full h-0.5 bg-gray-200 max-w-md mb-2 -mt-0.5 z-0"></div>
+            <div className="w-full h-0.5 bg-white max-w-md mb-2 -mt-0.5 z-0"></div>
 
-            <div className="flex gap-4 mt-4 mb-2 lg:gap-10">
-              <Link to="/super-carry" onClick={() => setVisible(false)}>
-                <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-primary/5">
-                  <img
-                    src={require("../assets/vehicles/super_carry/others/Super Carry.webp")}
-                    alt=""
-                    className="h-40"
-                  />
-                  <img
-                    src={require("../assets/vehicles/super_carry/others/new super carry logo.webp")}
-                    alt=""
-                    className="mt-2 "
-                  />
-                  <p className="mt-1 text-xs">
-                    Starting at <span className="font-bold"> ₹ 5,40,501 *</span>
-                  </p>
-                  <p className="text-xs">
-                    Engine <span className="font-bold"> 1197 cc</span>
-                  </p>
-                  <button
-                    aria-label="super-carry"
-                    className="px-4 py-1.5 text-sm hover:text-white border rounded-full hover:bg-primary text-primary bg-transparent border-primary mt-3 group-hover:opacity-100 opacity-0 duration-500"
-                  >
-                    Explore
-                  </button>
-                </div>
-              </Link>
-              <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
-                <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-primary/5 ">
-                  <img
-                    src={require("../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
-                    alt=""
-                    className="h-40"
-                  />
-                  <img
-                    src={require("../assets/vehicles/ecco_cargo/eecoCargoBrandName.png")}
-                    alt=""
-                    className="mt-2 "
-                  />
-                  <p className="mt-1 text-xs">
-                    Starting at <span className="font-bold"> ₹ 5,47,000 *</span>
-                  </p>
-                  <p className="text-xs">
-                    Engine <span className="font-bold"> 1197 cc</span>
-                  </p>
-                  <button
-                    aria-label="eeco-cargo"
-                    className="px-4 py-1.5 text-sm hover:text-white border rounded-full hover:bg-primary text-primary bg-transparent border-primary mt-3 group-hover:opacity-100 opacity-0 duration-500"
-                  >
-                    Explore
-                  </button>
-                </div>
-              </Link>
-            </div>
+            {selected === "Goods Carrier" ? (
+              <div className="flex gap-4 mt-4 mb-2 lg:gap-10">
+                <Link to="/super-carry" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white">
+                    <img
+                      src={require("../assets/vehicles/super_carry/others/Super Carry.webp")}
+                      alt=""
+                      className="h-40"
+                    />
+                    <img
+                      src={require("../assets/vehicles/super_carry/others/new super carry logo.webp")}
+                      alt=""
+                      className="h-3 mt-2 "
+                    />
+                    <p className="mt-1 text-xs">
+                      Starting at{" "}
+                      <span className="font-bold"> ₹ 5,40,501 *</span>
+                    </p>
+                    <p className="mb-3 text-xs">
+                      Engine <span className="font-bold"> 1197 cc</span>
+                    </p>
+                    {/* <button
+                      aria-label="super-carry"
+                      className="px-4 py-1.5 text-sm hover:text-white border rounded-full hover:bg-primary text-primary bg-transparent border-primary  group-hover:opacity-100 opacity-0 duration-500"
+                    >
+                      Explore
+                    </button> */}
+                  </div>
+                </Link>
+                <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white ">
+                    <img
+                      src={require("../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
+                      alt=""
+                      className="h-40"
+                    />
+                    <img
+                      src={require("../assets/vehicles/ecco_cargo/eecoCargoBrandName.png")}
+                      alt=""
+                      className="h-3 mt-2 "
+                    />
+                    <p className="mt-1 text-xs">
+                      Starting at{" "}
+                      <span className="font-bold"> ₹ 5,47,000 *</span>
+                    </p>
+                    <p className="mb-3 text-xs">
+                      Engine <span className="font-bold"> 1197 cc</span>
+                    </p>
+                    {/* <button
+                      aria-label="eeco-cargo"
+                      className="px-4 py-1.5 text-sm hover:text-white border rounded-full hover:bg-primary text-primary bg-transparent border-primary  group-hover:opacity-100 opacity-0 duration-500"
+                    >
+                      Explore
+                    </button> */}
+                  </div>
+                </Link>
+              </div>
+            ) : (
+              <div className="grid grid-cols-3 mt-4 mb-2 overflow-scroll grico lg:gap-x-10 max-h-[70vh]">
+                <Link to="/super-carry" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white">
+                    <img
+                      src={require("../assets/vehicles/Tour_H1/TourH1-NewImg.webp")}
+                      alt=""
+                      className="h-32"
+                    />
+                    <img
+                      src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_h1-logo-2-new.png"
+                      alt=""
+                      className="h-5 mt-2"
+                    />
+                    <p className="mt-1 text-xs">
+                      Starting at{" "}
+                      <span className="font-bold"> ₹ 5,40,501 *</span>
+                    </p>
+                    <p className="mb-3 text-xs">
+                      Engine <span className="font-bold"> 1197 cc</span>
+                    </p>
+                    {/* <button
+                      aria-label="super-carry"
+                      className="px-4 py-1.5 text-sm text-white border rounded-full bg-primary   border-primary  group-hover:opacity-100 opacity-0 duration-100"
+                    >
+                      Explore
+                    </button> */}
+                  </div>
+                </Link>
+                <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white ">
+                    <img
+                      src={require("../assets/vehicles/Tour_H3/Tour H3.webp")}
+                      alt=""
+                      className="h-32"
+                    />
+                    <img
+                      src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_h3-logo-2-new.png"
+                      alt=""
+                      className="h-5 mt-2"
+                    />
+                    <p className="mt-1 text-xs">
+                      Starting at{" "}
+                      <span className="font-bold"> ₹ 5,47,000 *</span>
+                    </p>
+                    <p className="mb-3 text-xs">
+                      Engine <span className="font-bold"> 1197 cc</span>
+                    </p>
+                    {/* <button
+                      aria-label="eeco-cargo"
+                      className="px-4 py-1.5 text-sm text-white border rounded-full bg-primary   border-primary  group-hover:opacity-100 opacity-0 duration-100"
+                    >
+                      Explore
+                    </button> */}
+                  </div>
+                </Link>
+                <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white ">
+                    <img
+                      src={require("../assets/vehicles/Tour_S/Tour S.webp")}
+                      alt=""
+                      className="h-32"
+                    />
+                    <img
+                      src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour-s-logo-new.png"
+                      alt=""
+                      className="h-5 mt-2"
+                    />
+                    <p className="mt-1 text-xs">
+                      Starting at{" "}
+                      <span className="font-bold"> ₹ 5,47,000 *</span>
+                    </p>
+                    <p className="mb-3 text-xs">
+                      Engine <span className="font-bold"> 1197 cc</span>
+                    </p>
+                    {/* <button
+                      aria-label="eeco-cargo"
+                      className="px-4 py-1.5 text-sm text-white border rounded-full bg-primary   border-primary  group-hover:opacity-100 opacity-0 duration-100"
+                    >
+                      Explore
+                    </button> */}
+                  </div>
+                </Link>
+                <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white ">
+                    <img
+                      src={require("../assets/vehicles/Tour_M/Tour M.webp")}
+                      alt=""
+                      className="h-32"
+                    />
+                    <img
+                      src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour-m-logo-new.png"
+                      alt=""
+                      className="h-5 mt-2"
+                    />
+                    <p className="mt-1 text-xs">
+                      Starting at{" "}
+                      <span className="font-bold"> ₹ 5,47,000 *</span>
+                    </p>
+                    <p className="mb-3 text-xs">
+                      Engine <span className="font-bold"> 1197 cc</span>
+                    </p>
+                    {/* <button
+                      aria-label="eeco-cargo"
+                      className="px-4 py-1.5 text-sm text-white border rounded-full bg-primary   border-primary  group-hover:opacity-100 opacity-0 duration-100"
+                    >
+                      Explore
+                    </button> */}
+                  </div>
+                </Link>
+                <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white ">
+                    <img
+                      src={require("../assets/vehicles/Tour_V/Tour V.webp")}
+                      alt=""
+                      className="h-32"
+                    />
+                    <img
+                      src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_v-logo-2-new.png"
+                      alt=""
+                      className="h-5 mt-2"
+                    />
+                    <p className="mt-1 text-xs">
+                      Starting at{" "}
+                      <span className="font-bold"> ₹ 5,47,000 *</span>
+                    </p>
+                    <p className="mb-3 text-xs">
+                      Engine <span className="font-bold"> 1197 cc</span>
+                    </p>
+                    {/* <button
+                      aria-label="eeco-cargo"
+                      className="px-4 py-1.5 text-sm text-white border rounded-full bg-primary   border-primary  group-hover:opacity-100 opacity-0 duration-100"
+                    >
+                      Explore
+                    </button> */}
+                  </div>
+                </Link>
+              </div>
+            )}
             {/* <div
               style={{
                 background: `linear-gradient(rgba(208, 226, 252, 0) 0%, rgb(208, 226, 252) 49.66%, rgb(208, 226, 252) 100%)`,

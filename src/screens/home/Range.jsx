@@ -330,27 +330,27 @@ const Range = () => {
             )
           ) : activeSlide === 0 ? (
             <img
-              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_h1-logo-2-new.png?mw=1200"
+              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_h1-logo-2-new.png"
               alt=""
             />
           ) : activeSlide === 1 ? (
             <img
-              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_h3-logo-2-new.png?mw=1200"
+              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_h3-logo-2-new.png"
               alt=""
             />
           ) : activeSlide === 2 ? (
             <img
-              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour-s-logo-new.png?mw=1200"
+              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour-s-logo-new.png"
               alt=""
             />
           ) : activeSlide === 3 ? (
             <img
-              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour-m-logo-new.png?mw=1200"
+              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour-m-logo-new.png"
               alt=""
             />
           ) : (
             <img
-              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_v-logo-2-new.png?mw=1200"
+              src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/homepage/vehical-range/tour_v-logo-2-new.png"
               alt=""
             />
           )}
