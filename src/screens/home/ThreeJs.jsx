@@ -1,6 +1,5 @@
 import { Canvas, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
-// import {TextureLoader} from "three";
 import * as THREE from "three"; // Import THREE
 import React from "react";
 import frontImg from "../../assets/vehicles/super_carry/car/front.jpg";
@@ -13,15 +12,12 @@ import { OrbitControls } from "@react-three/drei";
 
 const ThreeJs = () => {
   return (
-    <div className="h-screen bg-gray-800">
-      <Canvas camera={{ position: [-50, 0, 25] }}>
+    <div className="h-screen mx-auto ">
+      <Canvas camera={{ position: [-50, 0, -0] }}>
         <ambientLight intensity={1} />
-        <OrbitControls minDistance={10} maxDistance={40} />
+        <OrbitControls minDistance={5} maxDistance={20} />
+        <hemisphereLight skyColor="white" groundColor="white" intensity={0.5} />
         <Cube />
-        {/* <directionalLight position={[25, 25, 25]} intensity={1} /> */}
-        {/* <directionalLight position={[-50, 50, 25]} intensity={1} /> */}
-        {/* <directionalLight position={[-75, -75, 25]} intensity={1} /> */}
-        {/* <directionalLight position={[-75, -75, -50]} intensity={4} /> */}
       </Canvas>
     </div>
   );
@@ -34,8 +30,8 @@ function Cube() {
   const texture_2 = useLoader(TextureLoader, backImg);
   const texture_3 = useLoader(TextureLoader, topImg);
   const texture_4 = useLoader(TextureLoader, bottomImg);
-  const texture_5 = useLoader(TextureLoader, leftImg);
-  const texture_6 = useLoader(TextureLoader, rightImg);
+  const texture_5 = useLoader(TextureLoader, rightImg);
+  const texture_6 = useLoader(TextureLoader, leftImg);
   return (
     <mesh>
       <boxGeometry args={[100, 100, 100]} />

@@ -50,7 +50,7 @@ const Header = () => {
               <img
                 src={require("../assets/home/RKS Commercial Logo.png")}
                 alt=""
-                className="object-contain w-28 lg:w-32 "
+                className="object-contain w-28 lg:w-36 "
               />
             </Link>
           </div>
@@ -60,6 +60,7 @@ const Header = () => {
                 visible && "text-primary"
               } `}
               onMouseEnter={() => setVisible(true)}
+              onMouseLeave={() => setVisible(false)}
             >
               <p className="flex items-center gap-1 py-6 lg:py-7 group">
                 Vehicle Range
@@ -127,7 +128,7 @@ const Header = () => {
           <div
             onMouseEnter={() => setVisible(true)}
             onMouseLeave={() => setVisible(false)}
-            className={`absolute top-20 left-0 w-full bg-blue-50  hidden md:flex border-b  items-center  flex-col z-20 py-4 select-none lg:py-10`}
+            className={`absolute top-20 left-0 w-full bg-white  hidden md:flex border-b  items-center  flex-col z-20 py-4 select-none lg:py-10`}
           >
             <div className="z-10 flex justify-between w-full max-w-md text-sm">
               <div
@@ -151,12 +152,12 @@ const Header = () => {
                 Passenger Carrier
               </div>
             </div>
-            <div className="w-full h-0.5 bg-white max-w-md mb-2 -mt-0.5 z-0"></div>
+            <div className="w-full h-0.5 bg-primary/5 max-w-md mb-2 -mt-0.5 z-0"></div>
 
             {selected === "Goods Carrier" ? (
               <div className="flex gap-4 mt-4 mb-2 lg:gap-10">
                 <Link to="/super-carry" onClick={() => setVisible(false)}>
-                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white">
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-blue-50">
                     <img
                       src={require("../assets/vehicles/super_carry/others/Super Carry.webp")}
                       alt=""
@@ -183,11 +184,11 @@ const Header = () => {
                   </div>
                 </Link>
                 <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
-                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white ">
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-blue-50 ">
                     <img
                       src={require("../assets/vehicles/ecco_cargo/Eeco Cargo.webp")}
                       alt=""
-                      className="h-40"
+                      className="mb-4 h-36"
                     />
                     <img
                       src={require("../assets/vehicles/ecco_cargo/eecoCargoBrandName.png")}
@@ -212,8 +213,8 @@ const Header = () => {
               </div>
             ) : (
               <div className="grid grid-cols-3 mt-4 mb-2 overflow-scroll grico lg:gap-x-10 max-h-[70vh]">
-                <Link to="/super-carry" onClick={() => setVisible(false)}>
-                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white">
+                <Link to="/alto-tour-h1" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-blue-50">
                     <img
                       src={require("../assets/vehicles/Tour_H1/TourH1-NewImg.webp")}
                       alt=""
@@ -239,8 +240,8 @@ const Header = () => {
                     </button> */}
                   </div>
                 </Link>
-                <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
-                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white ">
+                <Link to="/wagonr-tour-h3" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-blue-50 ">
                     <img
                       src={require("../assets/vehicles/Tour_H3/Tour H3.webp")}
                       alt=""
@@ -266,8 +267,8 @@ const Header = () => {
                     </button> */}
                   </div>
                 </Link>
-                <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
-                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white ">
+                <Link to="/dzire-tour-s" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-blue-50 ">
                     <img
                       src={require("../assets/vehicles/Tour_S/Tour S.webp")}
                       alt=""
@@ -293,8 +294,8 @@ const Header = () => {
                     </button> */}
                   </div>
                 </Link>
-                <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
-                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white ">
+                <Link to="/ertiga-tour-m" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-blue-50 ">
                     <img
                       src={require("../assets/vehicles/Tour_M/Tour M.webp")}
                       alt=""
@@ -320,8 +321,8 @@ const Header = () => {
                     </button> */}
                   </div>
                 </Link>
-                <Link to="/eeco-cargo" onClick={() => setVisible(false)}>
-                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-white ">
+                <Link to="/eeco-tour-v" onClick={() => setVisible(false)}>
+                  <div className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl group hover:bg-blue-50 ">
                     <img
                       src={require("../assets/vehicles/Tour_V/Tour V.webp")}
                       alt=""

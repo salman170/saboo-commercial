@@ -2,16 +2,25 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
-  HiOutlineClipboardDocumentList, 
+  HiOutlineClipboardDocumentList,
   HiOutlineDocumentArrowDown,
 } from "react-icons/hi2";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import SocialMediaIcons from "../../../components/SocialMediaIcons";
+import SocialMediaIcons from "./SocialMediaIcons";
 
-const HeroSectionEcco = () => {
+const HeroSectionEcco = ({
+  webImg1,
+  mobImg1,
+  webImg2,
+  mobImg2,
+  altText,
+  brochureLink,
+  thubmnail1,
+  thubmnail2,
+}) => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -33,7 +42,7 @@ const HeroSectionEcco = () => {
             className=""
           >
             <img
-              src={require("../../../assets/vehicles/ecco_cargo/home/Eeco banner first mobile.webp")}
+              src={thubmnail1}
               alt=""
               className={`rounded-lg cursor-pointer `}
               onClick={() => setSelectedBanner(1)}
@@ -46,7 +55,7 @@ const HeroSectionEcco = () => {
             className=""
           >
             <img
-              src={require("../../../assets/vehicles/ecco_cargo/home/EECOBanner.webp")}
+              src={thubmnail2}
               alt=""
               className={`rounded-lg cursor-pointer `}
               onClick={() => setSelectedBanner(2)}
@@ -63,26 +72,26 @@ const HeroSectionEcco = () => {
           {selectedBanner === 1 ? (
             <div className="w-full h-full">
               <img
-                src={require("../../../assets/vehicles/ecco_cargo/home/eeco cargo main banner.webp")}
-                alt=""
+                src={webImg1}
+                alt={altText}
                 className="hidden object-cover w-full h-full md:block"
               />
               <img
-                src={require("../../../assets/vehicles/ecco_cargo/home/Group 162942.webp")}
-                alt=""
+                src={mobImg1}
+                alt={altText}
                 className="object-cover w-full h-full md:hidden"
               />
             </div>
           ) : (
             <div className="w-full h-full">
               <img
-                src={require("../../../assets/vehicles/ecco_cargo/home/eeco cargo main banner 2.webp")}
-                alt=""
+                src={webImg2}
+                alt={altText}
                 className="hidden object-cover w-full h-full md:block"
               />
               <img
-                src={require("../../../assets/vehicles/ecco_cargo/home/eeco cargo cng mob.webp")}
-                alt=""
+                src={mobImg2}
+                alt={altText}
                 className="object-cover w-full h-full md:hidden"
               />
             </div>
@@ -95,7 +104,7 @@ const HeroSectionEcco = () => {
               data-aos="zoom-in"
               data-aos-delay="400"
               data-aos-duration="700"
-              href="https://saboocommercial.in/admin/img/brochure/Eeco-leaflet-A4-BS6-ENGLISH-CTC.pdf"
+              href={brochureLink}
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 px-4 py-2 lg:py-2.5 text-white border border-white rounded-full lg:w-48 justify-center hover:bg-primary duration-500 hover:border-primary "

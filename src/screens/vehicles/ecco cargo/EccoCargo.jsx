@@ -2,7 +2,7 @@ import VehicleEnquiry from "../../../components/VehicleEnquiry";
 import CNGSection from "../../other/CNGSection";
 import FAQCar from "../../other/FAQCar";
 import ExperienceEcco from "./ExperienceEcco";
-import HeroSectionEcco from "./HeroSectionEcco";
+import HeroSectionEcco from "../../../components/HeroSectionEcco";
 import Specification from "./Specification";
 
 const EccoCargo = () => {
@@ -10,17 +10,14 @@ const EccoCargo = () => {
     {
       name: "Eeco Cargo Petrol",
       price: "5.47 ",
-      title: "Eeco Cargo",
     },
     {
       name: "Eeco Cargo CNG",
       price: "6.39 ",
-      title: "Eeco Cargo",
     },
     {
       name: "Eeco Cargo CNG AC",
       price: "6.79 ",
-      title: "Eeco Cargo",
     },
   ];
 
@@ -59,16 +56,22 @@ const EccoCargo = () => {
     title: "CNG TECHNOLOGY",
     description:
       "Give your business the perfect set of wheels with Maruti Suzuki Commercial EECO Cargo CNG. With Maruti Suzuki Factory-Fitted S-CNG Technology, experience enhanced performance and pleasurable driving in both petrol and CNG modes. Now carry more goods faster and cheaper and let your business boom.",
-    points: [
-      "With Factory Fitted S-CNG Technology",
-      "Enhanced Performance",
-    ],
-  }
+    points: ["With Factory Fitted S-CNG Technology", "Enhanced Performance"],
+  };
 
   return (
     <div>
-      <HeroSectionEcco />
-      <VehicleEnquiry data={variant} />
+      <HeroSectionEcco
+        webImg1={require("../../../assets/vehicles/ecco_cargo/home/eeco cargo main banner.webp")}
+        mobImg1={require("../../../assets/vehicles/ecco_cargo/home/Group 162942.webp")}
+        webImg2={require("../../../assets/vehicles/ecco_cargo/home/eeco cargo main banner 2.webp")}
+        mobImg2={require("../../../assets/vehicles/ecco_cargo/home/eeco cargo cng mob.webp")}
+        thubmnail1={require("../../../assets/vehicles/ecco_cargo/home/Eeco banner first mobile.webp")}
+        thubmnail2={require("../../../assets/vehicles/ecco_cargo/home/EECOBanner.webp")}
+        brochureLink="https://saboocommercial.in/admin/img/brochure/Eeco-leaflet-A4-BS6-ENGLISH-CTC.pdf"
+        altText={"Eeco Cargo"}
+      />
+      <VehicleEnquiry data={variant} vehicleName="Eeco Cargo" />
       <ExperienceEcco />
       <FeaturesEcco />
       <CNGSection data={cngData} />
@@ -79,8 +82,6 @@ const EccoCargo = () => {
 };
 
 export default EccoCargo;
-
-
 
 const FeaturesEcco = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import CurrencyFormatter from "./currency-formatter";
 
-const VehicleEnquiry = ({ data }) => {
+const VehicleEnquiry = ({ data, vehicleName }) => {
   const [variant, setVariant] = useState(data[0].price);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,14 +21,19 @@ const VehicleEnquiry = ({ data }) => {
           </p>
         </div> */}
 
-        <form id="enquiryForm" onSubmit={(e)=>handleSubmit(e)} className="w-full md:w-3/5" method="POST">
+        <form
+          id="enquiryForm"
+          onSubmit={(e) => handleSubmit(e)}
+          className="w-full md:w-3/5"
+          method="POST"
+        >
           <div className="gap-4 lg:grid lg:grid-cols-3 ">
             <div className="md:col-span-3">
               <h2 className="mb-1 text-4xl font-semibold text-gray-800 ">
                 Vehicle Enquiry
               </h2>
               <p className="mb-2 text-lg italic font-semibold text-gray-800">
-              ~  {data[0].title}
+                ~ {vehicleName}
               </p>
               <p className="mb-3 text-gray-500">
                 Please fill in the form below to enquire about this vehicle.

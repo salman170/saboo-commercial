@@ -2,7 +2,7 @@ import React from "react";
 
 const CNGSection = ({ data }) => {
   return (
-    <div className="bg-[url(https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/eeco-cargo/specification/eeco-cargo-cng-tech.png?h=686&iar=0&w=1512&hash=96DB4B62552C385EB76893F66FC47EFF&mw=1920)] bg-center py-20  bg-cover bg-no-repeat ">
+    <div className="bg-[url(https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/eeco-cargo/specification/eeco-cargo-cng-tech.png?h=686&iar=0&w=1512&hash=96DB4B62552C385EB76893F66FC47EFF&mw=1920)] bg-center py-20  bg-cover bg-no-repeat min-h-[60vh] flex flex-col justify-center ">
       <div className="container mx-auto lg:max-w-6xl px-0.5">
         <div className="max-w-lg px-8 pt-8 pb-6 bg-white rounded-lg">
           <p className="text-2xl italic font-semibold md:text-3xl lg:text-4xl">

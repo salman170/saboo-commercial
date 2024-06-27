@@ -12,22 +12,18 @@ const SuperCarry = () => {
     {
       name: "Super Carry Petrol",
       price: "4.88",
-      title: "Super Carry ",
     },
     {
       name: "Super Carry Petrol Chassis",
       price: "6.30",
-      title: "Super Carry ",
     },
     {
       name: "Super Carry CNG",
       price: "4.73",
-      title: "Super Carry ",
     },
     {
       name: "Super Carry CNG Chassis",
       price: "6.15",
-      title: "Super Carry ",
     },
   ];
   const faqs = [
@@ -104,9 +100,8 @@ const SuperCarry = () => {
   return (
     <div>
       <HeroSectionSuper />
-      <VehicleEnquiry data={variant} />
+      <VehicleEnquiry data={variant} vehicleName="Super Carry" />
       <Experience />
-
       <Features />
       <TVC />
       <Specification />
