@@ -209,7 +209,7 @@ const AboutUs = ({ setOpen }) => {
               <Link to="/about-us">Explore More</Link>
             </button>
           </div>
-          <div className="bg-[#7D7D7D] lg:min-w-60 rounded-xl absolute  -right-10 py-4 text-white sm:min-w-28 px-14 lg:py-6 -bottom-10 h-min md:-bottom-20 lg:-bottom-28">
+          <div className="bg-[#7D7D7D] lg:min-w-60 rounded-xl absolute  -right-10 py-4 text-white sm:min-w-28 px-14 lg:py-6 -bottom-20 h-min  lg:-bottom-28">
             <p
               data-aos="zoom-in"
               data-aos-delay="100"

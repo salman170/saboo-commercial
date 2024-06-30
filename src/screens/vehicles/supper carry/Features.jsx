@@ -58,7 +58,7 @@ const Features = () => {
 
   return (
     <div className="relative ">
-      <div className="sticky overflow-hidden top-20 outer_container">
+      <div className="overflow-hidden outer_container">
         <div className="container px-1 py-10 mx-auto lg:pt-20 lg:pb-20 md:max-w-6xl">
           <h2 className="bg-[#616161] text-2xl font-semibold text-white py-2 w-min rounded-md px-4 -skew-x-12 uppercase">
             Features
@@ -69,7 +69,7 @@ const Features = () => {
           <h5 className="mt-2 text-2xl font-light -skew-x-12 md:text-3xl">
             With Super Features
           </h5>
-          <div className="flex flex-col gap-8 py-4 mt-8 lg:mt-10 md:flex-row md:gap-10 lg:gap-20 md:mt-10 h-[25rem] ">
+          <div className="flex flex-col gap-8 py-4 mt-8 lg:mt-10 md:flex-row md:gap-10 lg:gap-20 md:mt-10 ">
             <div className="relative ">
               <div className="bg-white shadow-xl rounded-3xl feature_1">
                 <img
@@ -78,17 +78,17 @@ const Features = () => {
                   className="mx-auto my-10 lg:h-72"
                 />
               </div>
-              <img
+             {/*  <img
                 src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_6.png"
                 alt=""
-                className="invisible mx-auto mt-10 shadow-xl opacity-0 rounded-3xl feature_2 shadow-black"
+                className="mx-auto mt-10 shadow-xlopacity-0 rounded-3xl feature_2 shadow-black"
               />
               <img
                 src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_3.png"
                 alt=""
-                className="invisible mx-auto mt-10 shadow-xl opacity-0 rounded-3xl feature_3 shadow-black"
+                className="mx-auto mt-10 shadow-xl rounded-3xl feature_3 shadow-black"
               />
-              {/* <img
+              <img
                 src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_4.png"
                 alt=""
                 className="mx-auto mt-10 rounded-3xl feature_4"

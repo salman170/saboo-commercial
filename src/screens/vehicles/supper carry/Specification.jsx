@@ -422,18 +422,22 @@ const Specification = () => {
           <div className="w-1/5"></div>
           <div className="flex justify-between w-4/5 px-2 text-sm ">
             <div>
-              <input
-                type="checkbox"
-                checked={added.superCarryPetrol}
-                onChange={() => handleCheckboxChange("superCarryPetrol")}
-              />
-              Super Carry Petrol
+              <label htmlFor="">
+                <input
+                  type="checkbox"
+                  checked={added.superCarryPetrol}
+                  onChange={() => handleCheckboxChange("superCarryPetrol")}
+                  className="mr-2"
+                />
+                Super Carry Petrol
+              </label>
             </div>
             <div>
               <input
                 type="checkbox"
                 checked={added.superCarryCNG}
                 onChange={() => handleCheckboxChange("superCarryCNG")}
+                className="mr-2"
               />
               Super Carry CNG
             </div>{" "}
@@ -442,6 +446,7 @@ const Specification = () => {
                 type="checkbox"
                 checked={added.superCarryChasis}
                 onChange={() => handleCheckboxChange("superCarryChasis")}
+                className="mr-2"
               />
               Super Carry Petrol Chassis
             </div>
@@ -450,6 +455,7 @@ const Specification = () => {
                 type="checkbox"
                 checked={added.superCarryCNGChasis}
                 onChange={() => handleCheckboxChange("superCarryCNGChasis")}
+                className="mr-2"
               />
               Super Carry CNG Chassis
             </div>
@@ -477,16 +483,19 @@ const TableSection = ({ section, selected, setSelected, index }) => (
     <thead className="h-12 border">
       <tr
         onClick={() => setSelected(index)}
-        className={`font-medium text-left text-gray-700 cursor-pointer hover:bg-gray-100 ${
-          selected === index ? "bg-gray-50 text-primary" : "" }`}
+        className={`font-medium text-left text-gray-700 cursor-pointer hover:bg-gray-100  ${
+          selected === index ? "bg-gray-50 text-primary" : ""
+        }`}
       >
-        <th className={`w-1/5 px-4 py-2.5 font-normal whitespace-nowrap  `}>{section.title}</th>
+        <th className={`lg:w-1/5 px-4 py-2.5 font-normal whitespace-nowrap  `}>
+          {section.title}
+        </th>
+       <th className="w-1/5 px-4 py-2.5"></th>
         <th className="w-1/5 px-4 py-2.5"></th>
-        <th className="w-1/5 px-4 py-2.5"></th>
-        <th className="w-1/5 px-4 py-2.5"></th>
+        <th className="w-1/5 px-4 py-2.5"></th> 
         <th className="w-1/5 py-2.5 pr-10 ">
           <div className="flex justify-end w-full">
-            {selected === index ? <FaMinus  /> : <FaPlus  />}
+            {selected === index ? <FaMinus /> : <FaPlus />}
           </div>
         </th>
       </tr>
@@ -502,7 +511,7 @@ const TableSection = ({ section, selected, setSelected, index }) => (
             <td className="w-1/5 px-4 py-3">{row.value}</td>
             <td className="w-1/5 px-4 py-3">{row.value2}</td>
             <td className="w-1/5 px-4 py-3">{row.value3}</td>
-            <td className="w-1/5 px-4 py-3">{row.value4}</td>
+            <td className="w-1/5 px-4 py-3">{row.value4}</td> 
           </tr>
         ))}
       </tbody>

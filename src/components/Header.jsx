@@ -39,6 +39,16 @@ const Header = () => {
   //   }
   // }, [visible]);
 
+  // const handleMouseLeave = () => {
+  //   setTimeout(() => {
+  //     setVisible(false);
+  //   }, 500);
+  // }
+  // const handleMouseEnter = () => {
+  //   clearTimeout();
+  //   setVisible(true);
+  // }
+
   return (
     <div className="sticky top-0 left-0 z-40 w-full bg-white shadow ">
       <div className="relative">
@@ -60,7 +70,7 @@ const Header = () => {
                 visible && "text-primary"
               } `}
               onMouseEnter={() => setVisible(true)}
-              onMouseLeave={() => setVisible(false)}
+              // onMouseLeave={() => handleMouseLeave()}
             >
               <p className="flex items-center gap-1 py-6 lg:py-7 group">
                 Vehicle Range
@@ -128,7 +138,7 @@ const Header = () => {
           <div
             onMouseEnter={() => setVisible(true)}
             onMouseLeave={() => setVisible(false)}
-            className={`absolute top-20 left-0 w-full bg-white  hidden md:flex border-b  items-center  flex-col z-20 py-4 select-none lg:py-10`}
+            className={`absolute top-20 left-0 w-full bg-zinc-50  hidden md:flex border-b  items-center  flex-col z-20 py-4 select-none lg:py-10`}
           >
             <div className="z-10 flex justify-between w-full max-w-md text-sm">
               <div
