@@ -81,7 +81,7 @@ const Home = () => {
     <div className="overflow-hidden">
       <HeroSection />
       <Enquiry title1="ENQUIRE NOW " />
-      <Range />
+      {/* <Range />
       <AboutUs setOpen={setOpenYoutube} />
       <HomeNews />
       <SocialMedia />
@@ -90,7 +90,7 @@ const Home = () => {
         open={openYoutube.open}
         data={openYoutube}
         setOpenYoutube={setOpenYoutube}
-      />
+      /> */}
     </div>
   );
 };
