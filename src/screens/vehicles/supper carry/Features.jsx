@@ -1,65 +1,39 @@
-import React from "react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useEffect } from "react";
 // import { useGSAP } from "@gsap/react";
 
 const Features = () => {
-  // useGSAP(() => {
+  // useEffect(() => {
   //   gsap.registerPlugin(ScrollTrigger);
 
-  //   // Create a timeline
-  //   const tl = gsap.timeline();
-
-  //   tl.to(".outer_container", {
-  //     duration: 2,
-  //     position: "fixed",
-  //     width: "100%",
-  //     top: 0,
-  //     left: 0,
-  //     ease: "power1.inOut",
-  //   });
-
-  //   tl.to(".feature_2", {
-  //     duration: 2,
-  //     y: "-90%",
-  //     opacity: 1,
-  //     visibility: "visible",
-  //     ease: "power1.inOut",
-  //   });
-
-  //   tl.to(".feature_3", {
-  //     duration: 2,
-  //     y: "-190%",
-  //     opacity: 1,
-  //     visibility: "visible",
-  //     ease: "power1.inOut",
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: ".outer_container",
+  //       start: "top top",
+  //       end: "bottom+=200vh top", // Ensures the entire bottom
+  //       scrub: true,
+  //       markers: true,
+  //       // onLeave: () => gsap.set(".outer_container", { position: "static" }),
+  //       onEnterBack: () => gsap.set(".outer_container", { position: "sticky" }),
+  //     },
   //   });
 
   //   tl.to(".outer_container", {
   //     duration: 2,
-  //     // position: "static",
-  //     // display:"none",
+  //     position: "sticky",
   //     width: "100%",
+  //     // height: "200vh",
   //     top: 0,
   //     left: 0,
   //     ease: "power1.inOut",
   //   });
-
-  //   // Add ScrollTrigger to each animation
-  //   ScrollTrigger.create({
-  //     trigger: ".outer_container",
-  //     start: "bottom bottom",
-  //     end: "bottom bottom",
-  //     scrub: true,
-  //     markers: true,
-  //     animation: tl,
-  //   });
-  // });
+  // }, []);
 
   return (
-    <div className="relative ">
-      <div className="overflow-hidden outer_container">
-        <div className="container px-1 py-10 mx-auto lg:pt-20 lg:pb-20 md:max-w-6xl">
+    <>
+      <div className="relative overflow-hidden outer_container ">
+        <div className="container sticky px-1 py-10 mx-auto top-20 lg:pt-20 lg:pb-20 md:max-w-6xl ">
           <h2 className="bg-[#616161] text-2xl font-semibold text-white py-2 w-min rounded-md px-4 -skew-x-12 uppercase">
             Features
           </h2>
@@ -69,8 +43,8 @@ const Features = () => {
           <h5 className="mt-2 text-2xl font-light -skew-x-12 md:text-3xl">
             With Super Features
           </h5>
-          <div className="flex flex-col gap-8 py-4 mt-8 lg:mt-10 md:flex-row md:gap-10 lg:gap-20 md:mt-10 ">
-            <div className="relative ">
+          <div className="flex flex-col h-full gap-8 py-4 mt-8 lg:mt-10 md:flex-row md:gap-10 lg:gap-20 md:mt-10 ">
+            <div className="">
               <div className="bg-white shadow-xl rounded-3xl feature_1">
                 <img
                   src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_1.png"
@@ -78,7 +52,7 @@ const Features = () => {
                   className="mx-auto my-10 lg:h-72"
                 />
               </div>
-             {/*  <img
+              {/*  <img
                 src="https://static.marutisuzukicommercial.com/-/jssmedia/msilcommercial/images/supercarry/features/feature_sc_6.png"
                 alt=""
                 className="mx-auto mt-10 shadow-xlopacity-0 rounded-3xl feature_2 shadow-black"
@@ -148,70 +122,8 @@ const Features = () => {
           className="absolute bottom-0 left-0 w-full rotate-180 h-1/2 -z-10"
         ></div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default Features;
-
-// import React, { useEffect, useRef } from "react";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// const Features = () => {
-//   const divRef = useRef(null);
-//   const boxRef = useRef(null);
-
-//   useEffect(() => {
-//     gsap.registerPlugin(ScrollTrigger);
-
-//     const tl = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: divRef.current,
-//         start: "top 20%",
-//         end: "+=200%", // Extend the end point for smoother animation
-//         scrub: 1, // Set scrubbing to 1 for smoother scrolling
-//         markers: true,
-//       },
-//     });
-
-//     tl.to(divRef.current, {
-//       duration: 2,
-//       position: "fixed",
-//       ease: "power1.inOut",
-//     })
-//       .to(
-//         boxRef.current,
-//         {
-//           duration: 2,
-//           rotate: 360,
-//           x: 1000,
-//           borderRadius: "50%",
-//           ease: "power1.inOut",
-//         },
-//         0
-//       )
-//       .to(
-//         divRef.current,
-//         {
-//           duration: 2,
-//           position: "static",
-//           ease: "power1.inOut",
-//         },
-//         2
-//       );
-//   }, []);
-
-//   return (
-//     <div className="relative h-screen bg-red-50">
-//       <div className="static left-0 w-full top-40 testing_div" ref={divRef}>
-//         <div
-//           className="w-20 h-20 bg-red-400 rounded-lg red_box"
-//           ref={boxRef}
-//         ></div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Features;

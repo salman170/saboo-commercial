@@ -199,7 +199,7 @@ const Specification = () => {
   };
 
   return (
-    <div className="">
+    <div className="hidden md:block">
       <div className="container px-1 py-10 mx-auto lg:pb-20 md:max-w-6xl">
         <h2 className="bg-[#616161] text-2xl font-semibold text-white py-2 w-min rounded-md px-4 -skew-x-12 uppercase mb-4">
           Specification

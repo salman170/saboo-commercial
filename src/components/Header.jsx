@@ -26,6 +26,20 @@ const Header = () => {
   const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
   const [selected, setSelected] = useState("Goods Carrier");
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible2, setVisible2] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible2(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+      setVisible(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -50,8 +64,97 @@ const Header = () => {
   // }
 
   return (
-    <div className="sticky top-0 left-0 z-40 w-full bg-white shadow ">
-      <div className="relative">
+    <div
+      className={`sticky top-0 left-0 z-40 w-full bg-white shadow duration-200  ${
+        visible2 ? "" : "-translate-y-32"
+      } `}
+    >
+      <div
+        className={`fixed duration-200 w-full top-0 bg-white z-10  left-0 ${
+          visible2 ? "" : "translate-y-32"
+        } `}
+      >
+        <div className="flex justify-between w-full h-12 border-b">
+          <div className="flex items-center justify-between w-full px-2 md:gap-2 md:justify-start">
+           
+          <p className="text-xs">
+              Call Us:
+              <a
+                href="tel:+919848898488"
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary"
+              >
+                {" "}
+                98488-98488
+              </a>
+            </p>
+            <p className="text-xs">
+              Email:
+              <a
+                href="mailto:info@saboomaruti.in"
+                className="ml-1 text-primary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                info@saboomaruti.in
+              </a>
+            </p> 
+          </div>
+          <div className="items-center hidden gap-2 px-2 md:flex">
+            <button
+              aria-label="enquiry form"
+              className="px-4 py-2 text-xs text-center text-white uppercase rounded-full cursor-pointer w-28 bg-primary whitespace-nowrap "
+            >
+              Enquire Now
+            </button>
+            <button
+              aria-label="offers"
+              className="px-4 py-2 text-xs text-center text-white uppercase rounded-full cursor-pointer w-28 bg-primary"
+            >
+              Offers
+            </button>
+            {/* <div className="w-32 px-4 py-2 text-xs text-center text-white uppercase rounded-full bg-primary whitespace-nowrap">
+              Book a Service
+            </div>
+            <div className="w-32 px-4 py-2 text-xs text-center text-white uppercase rounded-full bg-primary whitespace-nowrap">
+             Showoom Visit
+            </div> */}
+          </div>
+        </div>
+      </div>
+      {/* <div className="flex justify-between w-full h-12 border-b">
+        <div className="flex items-center justify-between w-full px-2 md:gap-2 md:justify-start">
+          <p className="text-xs">
+            Call Us:
+            <a href="tel:+919848898488" target="_blank" rel="noreferrer" className="text-primary">
+              {" "}
+              98488-98488
+            </a>
+          </p>
+          <p className="text-xs ">
+            Email:
+            <a
+              href="mailto:info@saboomaruti.in"
+              className="ml-1 text-primary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              info@saboomaruti.in
+            </a>
+          </p>
+        </div>
+        <div className="items-center hidden gap-2 px-2 md:flex">
+          <div className="px-4 py-2 text-xs text-center text-white uppercase rounded-lg w-28 bg-primary">
+            Offers
+          </div>
+          <div className="px-4 py-2 text-xs text-center text-white uppercase rounded-lg w-28 bg-primary whitespace-nowrap">
+            Enquire Now
+          </div>
+         
+        </div>
+      </div> */}
+      <div className={`relative pt-12 `}>
         <div
           className={`flex items-center justify-between h-20 px-2 lg:px-4 border-b`}
         >
@@ -134,11 +237,11 @@ const Header = () => {
             </button>
           </div>
         </div>
-        {visible && (
+        {visible && visible2 && (
           <div
             onMouseEnter={() => setVisible(true)}
             onMouseLeave={() => setVisible(false)}
-            className={`absolute top-20 left-0 w-full bg-zinc-50  hidden md:flex border-b  items-center  flex-col z-20 py-4 select-none lg:py-10`}
+            className={`absolute top-32 left-0 w-full bg-zinc-50  hidden md:flex border-b  items-center  flex-col z-20 py-4 select-none lg:py-10`}
           >
             <div className="z-10 flex justify-between w-full max-w-md text-sm">
               <div

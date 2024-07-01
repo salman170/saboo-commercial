@@ -1,6 +1,6 @@
 // import React, { useState } from "react";
 import HeroSection from "./HeroSection";
-// import Range from "./Range";
+import Range from "./Range";
 // import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -81,8 +81,8 @@ const Home = () => {
     <div className="overflow-hidden">
       <HeroSection />
       <Enquiry title1="ENQUIRE NOW " />
-      {/* <Range />
-      <AboutUs setOpen={setOpenYoutube} />
+       <Range />
+     {/* <AboutUs setOpen={setOpenYoutube} />
       <HomeNews />
       <SocialMedia />
       <ScrollingSection />

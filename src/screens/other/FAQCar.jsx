@@ -14,7 +14,7 @@ const FAQCar = ({faqs}) => {
   return (
     <div className="mt-4">
       <div className="container px-1 py-10 mx-auto lg:pb-20 md:max-w-6xl">
-        <h3 className="mb-6 text-xl font-medium text-center md:text-2xl lg:text-3xl lg:mb-7">
+        <h3 className="mb-6 text-2xl font-medium text-center md:text-3xl lg:mb-7">
           FREQUENTLY ASKED QUESTIONS
         </h3>
         <div>
